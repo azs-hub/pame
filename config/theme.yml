@@ -1,0 +1,131 @@
+name: pame
+display_name: PAME
+version: 1.1.0
+author:
+  name: "Anais Siba"
+  email: "anais.siba@gmail.com"
+  url: "http://www.codeintrip.com"
+
+meta:
+  compatibility:
+      from: 1.7.6.1
+      to: ~
+
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-left-side-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+
+assets:
+  # If you're using this theme as child and you want to load
+  # the parent theme assets, uncomment this line.
+  # use_parent_assets: true
+
+  # The following lines are showing how to load assets in your page
+  # Uncomment and change value to start loading css or js files
+  css:
+    all:
+      - id: bootstrap
+        path: assets/css/bootstrap.css
+      
+      - id: topnav
+        path: assets/css/topnav.css
+      - id: mainnav
+        path: assets/css/mainnav.css
+      - id: featuredproducts
+        path: assets/css/featuredproducts.css
+      - id: products
+        path: assets/css/products.css
+  js:
+    all:
+      - id: jquery-lib
+        path: assets/js/jquery.js
+        position: head
+      - id: bootstrap-lib
+        path: assets/js/bootstrap.js
+        position: head
+
+   # ps_featuredproducts:
+   #   - id: home-style
+   #     path: assets/css/home.css
+   #     media: all
+   #     priority: 100
+   # catalog:
+   #   - id: product-style
+   #     path: assets/css/product.css
+   #     media: all
+   #     priority: 100
+ 
+
+global_settings:
+  configuration:
+    PS_QUICK_VIEW: false
+
+  hooks:
+    custom_hooks:
+      - name: displayFooterBefore
+        title: displayFooterBefore
+        description: Add a widget area above the footer
+    modules_to_hook:
+      displayNav1:
+        - ps_customersignin
+        - ps_shoppingcart
+      displayNav2:
+        - ps_languageselector
+        - ps_currencyselector
+      displayLogonav:
+        - ps_linklist
+      displayTop:
+        - ps_mainmenu
+      displayHome:
+        - ps_featuredproducts
+        - ps_customtext
+        # - ps_banner
+        # - ps_imageslider
+      displayFooterlink:
+        - ps_linklist
+      displayFooter:
+        - ps_linklist
+      displayFooterSocial:
+        - ps_socialfollow
+      displayFooterContact:
+        - ps_contactinfo
+
+  image_types:
+    cart_default:
+      width: 80
+      height: 80
+      scope: [products]
+    small_default:
+      width: 125
+      height: 125
+      scope: [products, categories, manufacturers, suppliers]
+    medium_default:
+      width: 300
+      height: 300
+      scope: [products, categories, manufacturers, suppliers]
+    large_default:
+      width: 500
+      height: 500
+      scope: [products]
+    home_default:
+      width: 250
+      height: 250
+      scope: [products]
+    category_default:
+      width: 960
+      height: 350
+      scope: [categories]
+    stores_default:
+      width: 170
+      height: 115
+      scope: [stores]
+
+theme_settings:
+  default_layout: layout-full-width
+
+  layouts:
+    category: layout-left-column

@@ -1,0 +1,197 @@
+
+/*
+** BREADCRUM
+*/
+.breadcrumb {
+  background-color: inherit;
+  padding: 0px;
+  margin-bottom: 30px;
+  height: 20px;
+}
+.breadcrumb ol {
+  width: 100%;
+  padding: 0px;
+}
+.breadcrumb li {
+  float: left;
+}
+.breadcrumb li:before {
+  content: "\e072";
+  color: #E8E8E8;
+  position: relative;
+  top: 0px;
+  left: 5px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 7px;
+}
+.breadcrumb li:after {
+  content: '';
+  position: relative;
+  top: 0px;
+  padding-left: 10px;
+  line-height: 20px;
+}
+.breadcrumb li:last-child:before {
+  content: "";
+}
+.breadcrumb li h1 {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  float: left;
+}
+.breadcrumb li h1 a {
+  font-size: 11px;
+}
+.breadcrumb li a {
+  color: #c1c1c1;
+  font-size: 10px;
+  font-family: 'Hind', sans-serif;
+  line-height: 20px;
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.breadcrumb li a:hover {
+  text-decoration: none;
+}
+.breadcrumb li:last-child a {
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+/*
+CATEGORY TREE
+*/
+/*.category-top-menu,*/
+.category-top-menu,
+.category-sub {
+  padding: 0px;
+  list-style: none;
+}
+.category-top-menu a:hover {
+  text-decoration: none;
+}
+.category-top-menu a:not(.active) {
+  transform: translate(0,0px);
+    transition: transform 0.5s;
+}
+.category-top-menu a:hover:not(.active) {
+    padding-left: 8px;
+    transform: translate(10px,0px);
+    transition: transform 0.5s;
+}
+.category-top-menu li > a {
+  font-size: 13px;
+  letter-spacing: 3px;
+  width: 100%;
+  display: block;
+  margin-top: 13px;
+}
+.category-top-menu li > a.active {
+  border-bottom: solid 1px #e8e8e9;
+}
+.category-top-menu li a.active span {
+  line-height: 27px;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+.category-top-menu li a.active span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    display: block;
+    height: 0;
+    border-bottom: 1px solid #000;
+}
+.category-top-menu li a + .category-sub {
+  display: none;
+}
+.category-top-menu li a.active + .category-sub {
+  display: block;
+}
+.category-top-menu li a + .category-sub li {
+  font-size: 12px;
+  display: block;
+  color: #000;
+  text-transform: uppercase;
+  padding: 5px 0px;
+  padding-left: 10px;
+  letter-spacing: 0.03em;
+}
+.category-top-menu li a + .category-sub li a {
+  margin: 0px;
+}
+.category-top-menu li a + .category-sub li a:before {
+  content: " ";
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+}
+.category-top-menu li a.active + .category-sub li a.active {
+  border-bottom: 0px;
+  margin-left: 0px;
+  line-height: 20px;
+}
+
+.category-top-menu li a.active + .category-sub li a.active:before {
+  content: "\e072";
+  color: #999;
+  position: relative;
+  top: 0px;
+  left: -5px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-size: 7px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.category-top-menu li a + .category-sub li:hover a:before,
+.category-top-menu li a.active + .category-sub li:hover a.active:before {
+  content: "\e072";
+  color: #E8E8E8;
+  position: relative;
+  top: 1px;
+  left: -5px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#block-reassurance {
+  margin-top: 150px;
+}
+#block-reassurance > div:before {
+    content: "\e239";
+    position: relative;
+    left: 49%;
+    font-family: "Glyphicons Halflings";
+    font-size: 20px;
+    opacity: 0.2;
+    top: -7px;
+}
+#block-reassurance p {
+  font-family: 'Droid Serif', Serif;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #888;
+}

@@ -1,0 +1,132 @@
+.featuredproducts {
+	margin-top: 20px;
+}
+.featuredproducts .cover {
+	position: relative;
+	margin-bottom: 20px;
+    transform: translate(0,-4px);
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+.featuredproducts .cover img {
+	width: 100%;
+}
+.featuredproducts .cover a {
+	width:  calc(100% - 30px);
+	height: 100%;
+	position: absolute;
+    left: 15px;
+    top: 0px;
+    transform: translate(0,0px);
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+.featuredproducts .cover a span {
+	display: block;
+}
+.featuredproducts .cover a h3 {
+	margin-top: 20px;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 23px;
+    text-shadow: 1px 1px 1px #999;
+    color: white;
+    font-family: 'Droid Serif', serif;
+}
+.featuredproducts .featured-left .cover a h3 {
+	color: black;
+    text-shadow: 0px 0px 0px #999;
+}
+.featuredproducts .featured-left .cover a > span {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 60%;
+}
+.featuredproducts .featured-left .cover:nth-child(2n) a > span {
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	top: auto;
+    left: auto;
+	width: 60%;
+	text-align: right;
+}
+.featuredproducts .featured-middle .cover a > span {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	width: 90%;
+	text-align: left;
+}
+.featuredproducts .featured-middle .cover:nth-child(2n) a > span {
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 20px;
+    right: 20px;
+	width: 90%;
+	text-align: right;
+}
+.featuredproducts .featured-right .cover a > span {
+	position: absolute;
+    top: 20%;
+    right: 20px;
+    width: 60%;
+    text-align: right;
+}
+.featuredproducts .featured-right .cover:nth-child(2n) a > span {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	width: 60%;
+	top: auto;
+    left: auto;
+	text-align: left;
+}
+.featuredproducts .cover a span span.teaser-cat {
+	font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.featuredproducts .cover a p {
+	visibility: hidden;
+	transition: transform 0.10s;
+}
+.featuredproducts .cover:hover {
+    transform: translate(0,4px);
+    transition: transform 0.5s;
+}
+.featuredproducts .cover:hover a {
+	transform: translate(0,14px);
+    transition: transform 0.5s;
+    text-decoration: none;
+}
+.featuredproducts .cover:hover a p {
+	visibility: visible;
+	transition: transform 0.10s;
+}
+.featuredproducts .featured-middle {
+	overflow: hidden;
+}
+.featuredproducts .featured-middle .cover {
+	height: 370px;
+    width: 100%;
+    position: relative;
+	top: 0px;
+	left: 0px;
+}
+.featuredproducts .featured-middle .cover img {
+	height: 100%;
+	width: auto;
+}
+.featuredproducts .custom-text {
+	text-align: right;
+}
+/*@media (max-width: 768px) {
+	.featuredproducts .featured-middle .cover img {
+		width: 100%;
+		height: auto;
+	}
+}*/

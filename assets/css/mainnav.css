@@ -1,0 +1,138 @@
+#_desktop_logo + div {
+	height: 100%;
+	position: absolute;
+    right: 0px;
+}
+.header-top {
+	margin-bottom: 30px;
+}
+.header-top .container {
+	border-bottom: solid 1px #e8e8e9;
+}
+.header-top > .container > .row {
+	position: relative;
+}
+.logo {
+    display: initial;
+	width: 100px;
+}
+#_desktop_logo a {
+	display: block;
+	text-align: center;
+}
+#_desktop_logo a:hover {
+	text-decoration: none;
+}
+.header-top h1,
+.header-top h2,
+#_desktop_logo h2 {
+    font-family: 'Droid Serif', serif;
+    text-transform: capitalize;
+    color: #e0680e;
+    font-size: 16px;
+    font-weight: bold;
+    margin:0px;
+}
+.header-top h1 span,
+.header-top h2 span {
+	font-family: 'Hind', sans-serif;
+    color: #999;
+    font-weight: 100;
+    font-size: 19px;
+    margin-left: 10px;
+}
+.menu {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.menu ul {
+	padding: 0px
+}
+.menu > ul {
+    position: absolute;
+    bottom: -1px;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+.menu > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
+  font-weight: 100;
+  font-size: 12px;
+  z-index: 20;
+  list-style: none;
+  border-bottom: solid 1px #e8e8e9;
+}
+.menu > ul > li:hover,
+.menu li.current {
+  border-bottom: solid 1px #000;
+}
+.menu > ul > li > div {
+  display: none;
+  position: absolute;
+  z-index: 1337;
+}
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+#mobile_top_menu_wrapper .dropdown button {
+	border: 0px;
+}
+@media (max-width: 768px) {
+	.header-top .container {
+		border-bottom-color: transparent;
+	}
+	#dropdownMenu1 {
+		padding: 5px;
+	    background-color: #000;
+	    background-image: none;
+	    text-shadow: none;
+	}
+	#mobile_top_menu_wrapper .dropdown-menu {
+		width: fit-content;
+	    min-width: 50px;
+	    padding: 10px;
+	}
+	#mobile_top_menu_wrapper .dropdown-menu .menu {
+		position: initial;
+	    width: auto;
+	    height: inherit;
+	    text-align: center;
+	}
+	#mobile_top_menu_wrapper .dropdown-menu .menu > ul {
+		position: inherit;
+	    bottom: 0px;
+	    width: auto;
+	    display: block;
+	}
+	#mobile_top_menu_wrapper .dropdown-menu .menu >ul > li {
+		margin-left: 0px;
+	}
+	#mobile_top_menu_wrapper .dropdown-menu .menu > ul > li:hover > div {
+	  display: none;
+	}
+	#_desktop_logo {
+		text-align: center;
+	}
+	.logo {
+		width: 80px;
+	}
+	.header-top h1,
+	.header-top h2 {
+		position: inherit;
+	    margin: 0 auto;
+	    border-top: solid 1px #999;
+	    line-height: 26px;
+	    display: block;
+	    width: fit-content;
+	    padding: 0px 10px;
+	}
+}

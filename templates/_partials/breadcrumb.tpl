@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- <div class="row">
   {if count($breadcrumb.links) > 1}
+ <div class="row">
   <nav data-depth="{$breadcrumb.count}" class="breadcrumb hidden-sm-down col-xs-12">
     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
       {block name='breadcrumb'}

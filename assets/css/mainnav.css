@@ -52,7 +52,7 @@
 .menu > ul {
     position: absolute;
     bottom: -1px;
-    right: 0px;
+    right: 15px;
     padding: 0px;
     margin: 0px;
 }

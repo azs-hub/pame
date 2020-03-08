@@ -39,6 +39,8 @@ assets:
         path: assets/css/featuredproducts.css
       - id: products
         path: assets/css/products.css
+      - id: cart
+        path: assets/css/cart.css
   js:
     all:
       - id: jquery-lib

@@ -231,7 +231,9 @@
     font-family: 'Droid Serif', serif;
     color: #333;
 }
-
+.product-variants-item .custom-select {
+    margin-bottom: 13px;
+}
 
 
 /*

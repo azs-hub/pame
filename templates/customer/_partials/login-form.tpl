@@ -51,14 +51,14 @@
     </div>
 
     {block name='login_form_footer'}
-      <footer class="form-footer col-xs-12 text-sm-center clearfix">
+      <footer class="form-footer col-xs-12 text-right clearfix">
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
+          <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
+          <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
           <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
             {l s='Sign in' d='Shop.Theme.Actions'}
           </button>
-          <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
-          <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
         {/block}
       </footer>
     {/block}

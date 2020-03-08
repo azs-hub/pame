@@ -27,7 +27,7 @@
 {block name='content'}
 
   <section id="main">
-    <div class="cart-grid row">
+    <div class="cart-grid">
 
       <!-- Left Block: cart product informations & shpping -->
       <div class="cart-grid-header col-xs-12">
@@ -41,7 +41,7 @@
                 </li>
               </ul>
             </div>
-            <ul class="navbar-right">
+            <ul class="nav navbar-nav navbar-right navbar-right">
               <li>
                 <div class="text-sm-center">
                   <a href="{$urls.pages.index}" class="btn btn-primary">{l s='Continue shopping' d='Shop.Theme.Actions'}</a>
@@ -56,11 +56,10 @@
             </nav>
           </header>
       </div>
-      <div class="cart-grid-body col-xs-12 col-lg-8">
+      <div class="cart-grid-body col-xs-12 col-sm-8">
 
         <!-- cart products detailed -->
         <div class="card cart-container">
-          <hr class="separator">
           {block name='cart_overview'}
             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
           {/block}

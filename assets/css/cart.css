@@ -7,15 +7,18 @@ ul.cart-items {
     letter-spacing: 2px;
     font-family: 'Hind', sans-serif;
     text-transform: uppercase;
-    float: right;
 }
 .cart-detailed-totals .products {
 	display: block;
 }
 .cart-detailed-totals .label {
-    font-size: 100%;
+    font-size: 12px;
     color: #888;
     font-weight: 500;
+    padding: 0;
+}
+.cart-detailed-totals .value {
+    float: right;
 }
 .regular-price {
   text-decoration: line-through;
@@ -37,9 +40,12 @@ ul.cart-items {
     padding-bottom: 20px;
     border-bottom: solid 1px #f3f3f3;
 }
-.cart-grid-right {
+.cart-grid-right .cart-summary {
     background-color: #f3eae5;
     padding: 30px;
+}
+.product-line-grid-left .product-image img {
+    width: 100%;
 }
 .product-line-info .value {
 	color: #333;
@@ -53,9 +59,36 @@ ul.cart-items {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 12px;
+    padding: 0;
 }
 .input-group-btn-vertical .btn {
 	padding: 10px;
+}
+.js-cart-line-product-quantity {
+    width: 100%;
+    display: table-cell;
+    box-shadow: none;
+    border: 0px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 100;
+    color: #666;
+}
+.product-price {
+    font-size: 17px;
+    font-weight: 100;
+    font-family: 'Hind', sans-serif;
+}
+.product-line-grid-left, .product-line-grid-body {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+}
+.product-line-grid-right {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
 }
 @media (max-width: 600px) {
     .reduction {
@@ -71,5 +104,8 @@ ul.cart-items {
         position: relative;
         display: inline-block;
         margin-right: 10px;
+    }
+    .cart-grid-header .navbar-nav {
+        margin: 0;
     }
 }

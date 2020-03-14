@@ -49,6 +49,9 @@ assets:
       - id: bootstrap-lib
         path: assets/js/bootstrap.js
         position: head
+      - id: cart-js
+        path: assets/js/cart.js
+        position: bottom
 
    # ps_featuredproducts:
    #   - id: home-style

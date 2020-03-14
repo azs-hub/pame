@@ -22,16 +22,16 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="product-line-grid">
+<div class="product-line-grid row">
   <!--  product left content: image-->
-  <div class="product-line-grid-left col-md-2 col-xs-4">
+  <div class="product-line-grid-left col-xs-2">
     <span class="product-image media-middle">
       <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
     </span>
   </div>
 
   <!--  product left body: description -->
-  <div class="product-line-grid-body col-md-4 col-xs-8">
+  <div class="product-line-grid-body col-xs-4">
     <div class="product-line-info">
       <a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
     </div>
@@ -110,37 +110,55 @@
     {/if}
   </div>
 
+
+
   <!--  product left body: description -->
-  <div class="product-line-grid-right product-line-actions col-md-6 col-xs-12">
-    <div class="col-md-10 col-xs-6">
-      <div class="col-md-6 col-xs-6 qty">
+  <div class="product-line-grid-right product-line-actions col-xs-6">
+  <div class="row">
+    <div class="col-xs-6 qty">
         {if isset($product.is_gift) && $product.is_gift}
           <span class="gift-quantity">{$product.quantity}</span>
         {else}
-          <input
-            class="js-cart-line-product-quantity"
-            data-up-url="{$product.up_quantity_url}"
-            data-update-url="{$product.update_quantity_url}"
-            data-product-id="{$product.id_product}"
+          
+          <div class="input-group">
+            <div class="input-group-btn">
+              <a 
+              class="btn-sm btn-touchspin js-touchspin js-decrease-product-quantity
+              bootstrap-touchspin-down"
+              href="#"
+              data-qty-action="{$product.down_quantity_url}">
+                <span class="glyphicon glyphicon-menu-down"></span>
+              </a>
+            </div>
+            
+            <input
+            class="js-cart-line-product-quantity form-control"
             type="number"
             value="{$product.quantity}"
             name="product-quantity-spin"
             min="{$product.minimal_quantity}"
           />
+            <div class="input-group-btn">
+              <a
+              href="#"
+              class="btn-sm btn-touchspin js-touchspin js-increase-product-quantity  bootstrap-touchspin-up"
+              data-qty-action="{$product.up_quantity_url}">
+                <span class="glyphicon glyphicon-menu-up"></span>
+              </a> 
+            </div>
+
+          </div>
           
         {/if}
       </div>
-      <div class="col-md-6 col-xs-2 price">
-        <span class="product-price">
-          <strong>
-            {if isset($product.is_gift) && $product.is_gift}
-              <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
-            {else}
-              {$product.total}
-            {/if}
-          </strong>
-        </span>
-      </div>
+    <div class="col-xs-4 price">
+      <span class="product-price">
+        {if isset($product.is_gift) && $product.is_gift}
+          <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
+        {else}
+          {$product.total}
+        {/if}
+      </span>
     </div>
     <div class="col-md-2 col-xs-2 text-xs-right">
       <div class="cart-line-product-actions">
@@ -154,7 +172,7 @@
             data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
         >
           {if !isset($product.is_gift) || !$product.is_gift}
-          <i class="material-icons float-xs-left">delete</i>
+          <span class="glyphicon glyphicon-remove"></span>
           {/if}
         </a>
 
@@ -164,6 +182,7 @@
 
       </div>
     </div>
+  </div>
   </div>
 
   <div class="clearfix"></div>

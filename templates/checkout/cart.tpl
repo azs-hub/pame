@@ -30,7 +30,8 @@
     <div class="cart-grid">
 
       <!-- Left Block: cart product informations & shpping -->
-      <div class="cart-grid-header col-xs-12">
+      <div class="cart-grid-header row">
+        <div class="col-xs-12">
         
           <header class="page-header">
             <nav class="navbar navbar-default">
@@ -55,50 +56,54 @@
             </ul>
             </nav>
           </header>
+        </div>
       </div>
-      <div class="cart-grid-body col-xs-12 col-sm-8">
 
-        <!-- cart products detailed -->
-        <div class="card cart-container">
-          {block name='cart_overview'}
-            {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
+      <div class="row">
+        <div class="cart-grid-body col-xs-12 col-sm-8">
+
+          <!-- cart products detailed -->
+          <div class="card cart-container">
+            {block name='cart_overview'}
+              {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
+            {/block}
+          </div>
+
+          {block name='continue_shopping'}
+            <a class="label" href="{$urls.pages.index}">
+              <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+            </a>
+          {/block}
+
+          <!-- shipping informations -->
+          {block name='hook_shopping_cart_footer'}
+            {hook h='displayShoppingCartFooter'}
           {/block}
         </div>
 
-        {block name='continue_shopping'}
-          <a class="label" href="{$urls.pages.index}">
-            <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
-          </a>
-        {/block}
+        <!-- Right Block: cart subtotal & cart total -->
+        <div class="cart-grid-right col-xs-12 col-sm-4">
 
-        <!-- shipping informations -->
-        {block name='hook_shopping_cart_footer'}
-          {hook h='displayShoppingCartFooter'}
-        {/block}
-      </div>
+          {block name='cart_summary'}
+            <div class="card cart-summary">
 
-      <!-- Right Block: cart subtotal & cart total -->
-      <div class="cart-grid-right col-xs-12 col-lg-4">
+              {block name='hook_shopping_cart'}
+                {hook h='displayShoppingCart'}
+              {/block}
 
-        {block name='cart_summary'}
-          <div class="card cart-summary">
+              {block name='cart_totals'}
+                {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
+              {/block}
 
-            {block name='hook_shopping_cart'}
-              {hook h='displayShoppingCart'}
-            {/block}
+            </div>
+          {/block}
 
-            {block name='cart_totals'}
-              {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
-            {/block}
-
-          </div>
-        {/block}
-
-      </div>
-      <div class="col-xs-12">
-        {block name='hook_reassurance'}
-          {hook h='displayReassurance'}
-        {/block}
+        </div>
+        <div class="col-xs-12">
+          {block name='hook_reassurance'}
+            {hook h='displayReassurance'}
+          {/block}
+        </div>
       </div>
 
     </div>

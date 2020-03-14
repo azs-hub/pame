@@ -15,11 +15,9 @@
  * The safest way to do so is to place your "override" inside the theme's main JS file.
  *
  */
-console.log('test');
 $(document).ready(function () {
   prestashop.blockcart = prestashop.blockcart || {};
   // var modalTimeout;
-  console.log('test 2');
   var hideModal = prestashop.blockcart.hideModal || function (modal) {
     $('#blockcart-modal').modal('hide');
     // clearTimeout(modalTimeout);
@@ -39,7 +37,6 @@ $(document).ready(function () {
     prestashop.on(
       'updateCart',
       function (event) {
-          console.log('test 3');
         var refreshURL = $('.blockcart').data('refresh-url');
         var requestData = {};
 
@@ -52,7 +49,6 @@ $(document).ready(function () {
         }
 
         $.post(refreshURL, requestData).then(function (resp) {
-          console.log('2', resp.preview, resp.modal, resp);
           $('.blockcart').replaceWith($(resp.preview).find('.blockcart'));
           if (resp.modal) {
             showModal(resp.modal);

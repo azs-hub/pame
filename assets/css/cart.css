@@ -17,15 +17,6 @@ ul.cart-items {
     color: #888;
     font-weight: 500;
 }
-@media (max-width: 600px) {
-	.reduction {
-		min-width: 100%;
-		margin-bottom: 20px;
-	}
-	.cart-detailed-totals {
-		width: 100%;
-	}
-}
 .regular-price {
   text-decoration: line-through;
   color: #ccc;
@@ -65,4 +56,20 @@ ul.cart-items {
 }
 .input-group-btn-vertical .btn {
 	padding: 10px;
+}
+@media (max-width: 600px) {
+    .reduction {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    .cart-detailed-totals {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .cart-grid-header .nav > li {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+    }
 }

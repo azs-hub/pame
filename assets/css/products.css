@@ -235,6 +235,24 @@
     margin-bottom: 13px;
 }
 
+@media (max-width: 768px) {
+    #product .js-qv-mask {
+        width: 100%;
+    }
+    #product .js-qv-mask .thumb-container {
+        margin-bottom: 10px;
+        width: 15%;
+        float: left;
+        margin-right: 10px;
+    }
+    #product .product-cover {
+        width: 100%;
+    }
+    .short-description {
+        margin-top: 50px;
+    }
+}
+
 
 /*
 .form-control-select {

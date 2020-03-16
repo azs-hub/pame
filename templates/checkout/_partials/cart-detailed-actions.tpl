@@ -25,9 +25,6 @@
 {block name='cart_detailed_actions'}
   <div class="checkout cart-detailed-actions card-block">
     {if $cart.minimalPurchaseRequired}
-      <div class="alert alert-warning" role="alert">
-        {$cart.minimalPurchaseRequired}
-      </div>
       <div class="text-sm-center">
         <button type="button" class="btn btn-default disabled" disabled>{l s='Proceed to checkout' d='Shop.Theme.Actions'}</button>
       </div>

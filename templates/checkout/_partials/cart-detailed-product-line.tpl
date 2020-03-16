@@ -126,7 +126,7 @@
               class="btn-sm btn-touchspin js-touchspin js-decrease-product-quantity
               bootstrap-touchspin-down"
               href="#"
-              data-qty-action="{$product.down_quantity_url}">
+              data-action="{$product.down_quantity_url}">
                 <span class="glyphicon glyphicon-menu-down"></span>
               </a>
             </div>
@@ -142,7 +142,7 @@
               <a
               href="#"
               class="btn-sm btn-touchspin js-touchspin js-increase-product-quantity  bootstrap-touchspin-up"
-              data-qty-action="{$product.up_quantity_url}">
+              data-action="{$product.up_quantity_url}">
                 <span class="glyphicon glyphicon-menu-up"></span>
               </a> 
             </div>
@@ -161,18 +161,19 @@
       </span>
     </div>
     <div class="col-md-2 col-xs-2 text-xs-right">
-      <div class="cart-line-product-actions">
+      <div class="btn-sm cart-line-product-actions">
         <a
             class                       = "remove-from-cart"
             rel                         = "nofollow"
-            href                        = "{$product.remove_from_cart_url}"
+            href                        = "#"
+            data-action                        = "{$product.remove_from_cart_url}"
             data-link-action            = "delete-from-cart"
             data-id-product             = "{$product.id_product|escape:'javascript'}"
             data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
             data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
         >
           {if !isset($product.is_gift) || !$product.is_gift}
-          <span class="glyphicon glyphicon-remove"></span>
+          <span class="glyphicon glyphicon-trash"></span>
           {/if}
         </a>
 

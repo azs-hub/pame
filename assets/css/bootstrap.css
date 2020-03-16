@@ -3166,7 +3166,7 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus {
     opacity: 0.5;
     background-color: #333;
-    color: #333;
+    color: #fff;
     text-shadow: none;
 }
 .btn-primary .badge {

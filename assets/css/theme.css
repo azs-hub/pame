@@ -510,10 +510,10 @@ label.radio-block {
 
 p {
 	font-family: 'Hind', sans-serif;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin: 5px 0px 3px 0px;
-    line-height: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 5px 0px 3px 0px;
+  line-height: 20px;
 }
 li {
 	list-style: none;

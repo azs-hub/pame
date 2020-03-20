@@ -26,6 +26,7 @@
 
 {block "form_field"}
   {if $field.name === 'password' and $guest_allowed}
+      <hr/>
       <p>
         <span class="font-weight-bold">{l s='Create an account' d='Shop.Theme.Checkout'}</span> <span class="font-italic">{l s='(optional)' d='Shop.Theme.Checkout'}</span>
         <br>

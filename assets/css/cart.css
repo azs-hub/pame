@@ -1,7 +1,7 @@
 ul.cart-items {
     padding-left: 0px;
 }
-.cart-detailed-totals {
+.cart-summary-line {
     font-size: 15px;
     line-height: 33px;
     letter-spacing: 2px;
@@ -11,13 +11,13 @@ ul.cart-items {
 .cart-detailed-totals .products {
 	display: block;
 }
-.cart-detailed-totals .label {
+.cart-summary-line .label {
     font-size: 12px;
     color: #888;
     font-weight: 500;
     padding: 0;
 }
-.cart-detailed-totals .value {
+.cart-summary-line .value {
     float: right;
 }
 .regular-price {
@@ -89,6 +89,85 @@ ul.cart-items {
     display: table-cell;
     float: none;
     vertical-align: middle;
+}
+/*
+** Checkout
+*/
+.checkout-step .step-title {
+    margin-bottom: 20px;
+}
+#checkout-personal-information-step .nav-pills {
+    margin-bottom: 20px;
+}
+#checkout-personal-information-step .nav-pills > li a {
+    padding: 5px 0px;
+}
+.checkout-step.-reachable > h2 {
+    font-family: 'Hind', sans-serif;
+    font-size: 24px;
+    margin: 0px;
+    background-color: #fff;
+    color: #999;
+    padding: 10px 0px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.checkout-step.-current > h2 {
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 3px;
+    font-size: 24px;
+    margin: 10px 0px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background-color: #fff;
+    color: #e0680e;
+    font-weight: 100;
+}
+.checkout-step.-unreachable > h2 {
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 3px;
+    font-size: 24px;
+    margin: 0px;
+    background-color: #fff;
+    padding: 10px 0px;
+    color: black;
+    font-weight: 100;
+}
+.checkout-step.-current > h2 .step-number,
+.checkout-step.-unreachable > h2 .step-number,
+.checkout-step.-reachable > h2 .step-number {
+    display: none;
+}
+.checkout-step {
+    width: 100%;
+    text-align: left;
+    float: left;
+}
+.checkout-step h2 .glyphicon {
+    font-size: 10px;
+}
+.checkout-step.-unreachable .content,
+.checkout-step.-reachable .content {
+    display: none;
+}
+.checkout-step.-current .content {
+    display: block;
+}
+body#checkout section.checkout-step .done,
+body#checkout section.checkout-step .step-edit {
+    display: none;
+}
+body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin-right: .125rem;
+}
+#customer-form hr {
+    border-color: #333;
+}
+#customer-form p .font-weight-bold {
+    font-size: 14px;
 }
 @media (max-width: 600px) {
     .reduction {

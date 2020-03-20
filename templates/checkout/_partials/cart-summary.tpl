@@ -36,7 +36,7 @@
         <p>
           <a href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
             {l s='show details' d='Shop.Theme.Actions'}
-            <i class="material-icons">expand_more</i>
+            <span class="glyphicon glyphicon-menu-down"></span>
           </a>
         </p>
 

@@ -54,19 +54,25 @@
       {block name='content'}
         <section id="content">
           <div class="row">
-            <div class="cart-grid-body col-xs-12 col-lg-8">
+            <div class="cart-grid-body col-xs-12 col-sm-7 col-md-8">
               {block name='cart_summary'}
                 {render file='checkout/checkout-process.tpl' ui=$checkout_process}
               {/block}
             </div>
 
-            <div class="cart-grid-right col-xs-12 col-lg-4">
+            <div class="cart-grid-right col-xs-12 col-sm-5 col-md-4">
 
               {block name='cart_summary'}
-                {include file='checkout/_partials/cart-summary.tpl' cart = $cart}
+                <div class="card cart-summary">
+                  {include file='checkout/_partials/cart-summary.tpl' cart = $cart}
+                </div>
               {/block}
+            </div>
 
-              {hook h='displayReassurance'}
+            <div class="col-xs-12">
+              {block name='hook_reassurance'}
+                {hook h='displayReassurance'}
+              {/block}
             </div>
           </div>
         </section>

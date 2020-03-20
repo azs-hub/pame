@@ -22,7 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
 {block name='customer_form'}
+
   {block name='customer_form_errors'}
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
@@ -32,9 +34,9 @@
     {block "form_fields"}
       {foreach from=$formFields item="field"}
         {block "form_field"}
-          {if $field.required}
+          
             {form_field field=$field}
-          {/if} 
+          
         {/block}
       {/foreach}
       {$hook_create_account_form nofilter}

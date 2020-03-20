@@ -25,52 +25,57 @@
 {block name='header'}
   {block name='header_nav'}
     <nav class="header-nav">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 hidden-sm-down" id="_desktop_logo">
-            <a href="{$urls.base_url}">
-              <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
-            </a>
-          </div>
-          <div class="col-md-6 text-xs-right hidden-sm-down">
-            {hook h='displayNav1'}
-          </div>
-          <div class="hidden-md-up text-sm-center mobile">
+    <div class="container">
+      <div class="row">
+        <div class="hidden-sm-down">
+          <div class="hidden-xs col-sm-5 text-left">
             {hook h='displayNav2'}
-            <div class="float-xs-left" id="menu-icon">
-              <i class="material-icons">&#xE5D2;</i>
-            </div>
-            <div class="float-xs-right" id="_mobile_cart"></div>
-            <div class="float-xs-right" id="_mobile_user_info"></div>
-            <div class="top-logo" id="_mobile_logo"></div>
-            <div class="clearfix"></div>
           </div>
-        </div>
-      </div>
-    </nav>
-  {/block}
 
-  {block name='header_top'}
-    <div class="header-top hidden-md-up">
-      <div class="container">
-         <div class="row">
-          <div class="col-sm-12">
-            <div class="row">
-              {hook h='displayTop'}
-              <div class="clearfix"></div>
+          <div class="col-xs-5 hidden-sm hidden-md hidden-lg text-left">
+            <div id="mobile_top_menu_wrapper" class="col-xs-5 hidden-md">
+              <div class="dropdown">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                  <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  {hook h='displayTop'}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-          <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-          <div class="js-top-menu-bottom">
-            <div id="_mobile_currency_selector"></div>
-            <div id="_mobile_language_selector"></div>
-            <div id="_mobile_contact_link"></div>
+
+          <div class="col-xs-7 text-right">
+              {hook h='displayNav1'}
           </div>
         </div>
       </div>
     </div>
-    {hook h='displayNavFullWidth'}
+  </nav>
+  {/block}
+
+  {block name='header_top'}
+    <div class="header-top">
+    <div class="container">
+       <div class="row">
+        <div class="col-sm-3 hidden-xs-down" id="_desktop_logo">
+          <a href="{$urls.base_url}">
+            <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+            {if $page.page_name == 'index'}
+              <h1>{$shop.name} <span>SHOP</span></h1>
+            {else}
+              <h2>{$shop.name} <span>SHOP</span></h2>
+            {/if}
+          </a>
+        </div>
+        <div class="col-sm-9 hidden-xs position-static">
+          {hook h='displayTop'}
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {hook h='displayNavFullWidth'}
   {/block}
 {/block}

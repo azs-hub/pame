@@ -47,10 +47,10 @@
     </div>
 
   {else}
-    <ul class="nav nav-inline my-2" role="tablist">
-      <li class="nav-item">
+    <ul class="nav nav-pills" role="tablist">
+      <li class="nav-item {if !$show_login_form}active{/if}">
         <a
-          class="nav-link {if !$show_login_form}active{/if}"
+          class="nav-link"
           data-toggle="tab"
           href="#checkout-guest-form"
           role="tab"

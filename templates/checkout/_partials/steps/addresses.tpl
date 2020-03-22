@@ -56,7 +56,7 @@
           }
         </div>
       {elseif $customer.addresses|count > 0}
-        <div id="delivery-addresses" class="address-selector js-address-selector">
+        <div id="delivery-addresses" class="address-selector js-address-selector row">
           {include  file        = 'checkout/_partials/address-selector-block.tpl'
                     addresses   = $customer.addresses
                     name        = "id_address_delivery"
@@ -73,12 +73,12 @@
         {/if}
 
         <p class="add-address">
-          <a href="{$new_address_delivery_url}"><i class="material-icons">&#xE145;</i>{l s='add new address' d='Shop.Theme.Actions'}</a>
+          <a href="{$new_address_delivery_url}"><span class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
         </p>
 
         {if $use_same_address && !$cart.is_virtual}
           <p>
-            <a data-link-action="different-invoice-address" href="{$use_different_address_url}">
+            <a data-link-action="different-invoice-address" id="different-invoice-address" href="{$use_different_address_url}">
               {l s='Billing address differs from shipping address' d='Shop.Theme.Checkout'}
             </a>
           </p>
@@ -117,7 +117,7 @@
           {/if}
 
           <p class="add-address">
-            <a href="{$new_address_invoice_url}"><i class="material-icons">&#xE145;</i>{l s='add new address' d='Shop.Theme.Actions'}</a>
+            <a href="{$new_address_invoice_url}"><span class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
           </p>
         {/if}
 

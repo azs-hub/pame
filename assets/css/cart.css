@@ -133,11 +133,6 @@ ul.cart-items {
     color: black;
     font-weight: 100;
 }
-.checkout-step.-current > h2 .step-number,
-.checkout-step.-unreachable > h2 .step-number,
-.checkout-step.-reachable > h2 .step-number {
-    display: none;
-}
 .checkout-step {
     width: 100%;
     text-align: left;
@@ -164,11 +159,68 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     margin-right: .125rem;
 }
 #customer-form hr {
-    border-color: #333;
+    border: solid 5px #efefef
 }
 #customer-form p .font-weight-bold {
     font-size: 14px;
 }
+
+/*
+** Adresse
+*/
+.address-item .selectmark {
+    display: none;
+}
+.address-item header {
+    padding: 20px;
+    background-color: #eee;
+    padding: 15px;
+}
+.address-item hr {
+    margin: 0px;
+}
+.address-item .address-footer {
+    text-align: center;
+}
+.address-item.selected header {
+    border: solid 3px #e0680e;
+    background-color: #fff;
+}
+.address-alias {
+    font-size: 20px;
+    display: inline-block;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 20px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    vertical-align: top;
+}
+#delivery-addresses {
+    margin-bottom: 20px;
+}
+#different-invoice-address {
+    color: #e0680e;
+}
+.add-address,
+.js-address-error {
+    display: inline-block;
+    width: 100%;
+}
+.delivery-option {
+    background: #f6f6f6;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.delivery-option span {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 32px;
+}
+
 @media (max-width: 600px) {
     .reduction {
         min-width: 100%;

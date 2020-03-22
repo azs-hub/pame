@@ -974,6 +974,7 @@ i.touchspin-down {
   line-height: 24px;
   color: #333;
   display: inline-block;
+  border: solid 1px #ccc;
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .selectmark:after {

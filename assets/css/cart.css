@@ -212,13 +212,55 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     padding: 20px 0;
     margin-bottom: 20px;
 }
+.delivery-option img {
+    max-width: 25px;
+}
+.delivery-option label {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
 .delivery-option span {
-    font-weight: bold;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 14px;
     margin: 0px;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: initial;
     line-height: 32px;
+}
+/*
+** Payment
+*/
+.payment-option {
+    margin-bottom: 10px;
+}
+.payment-option label span {
+    vertical-align: text-top;
+    display: inline-block;
+    font-size: 14px;
+}
+.payment-option .custom-radio {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.payment-options dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.payment-options dd {
+    font-weight: 500;
+}
+.payment-options dd,
+.payment-options dt {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 4px;
+    font-size: 14px;
 }
 
 @media (max-width: 600px) {

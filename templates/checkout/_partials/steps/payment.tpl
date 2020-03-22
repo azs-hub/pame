@@ -22,18 +22,20 @@
         <div>
           <div id="{$option.id}-container" class="payment-option clearfix">
             {* This is the way an option should be selected when Javascript is enabled *}
-            <span class="custom-radio float-xs-left">
-              <input
-                class="ps-shown-by-js {if $option.binary} binary {/if}"
-                id="{$option.id}"
-                data-module-name="{$option.module_name}"
-                name="payment-option"
-                type="radio"
-                required
-                {if $selected_payment_option == $option.id || $is_free} checked {/if}
-              >
-              <span></span>
-            </span>
+            <label class="radio-inline">
+              <span class="custom-radio custom-container">
+                <input
+                  class="input-radio ps-shown-by-js {if $option.binary} binary {/if}"
+                  id="{$option.id}"
+                  data-module-name="{$option.module_name}"
+                  name="payment-option"
+                  type="radio"
+                  required
+                  {if $selected_payment_option == $option.id || $is_free} checked {/if}
+                >
+                <span class="selectmark"></span>
+              </span>
+            </label>
             {* This is the way an option should be selected when Javascript is disabled *}
             <form method="GET" class="ps-hidden-by-js">
               {if $option.id === $selected_payment_option}
@@ -99,20 +101,16 @@
         {foreach from=$conditions_to_approve item="condition" key="condition_name"}
           <li>
             <div class="float-xs-left">
-              <span class="custom-checkbox">
-                <input  id    = "conditions_to_approve[{$condition_name}]"
+              <label class="custom-container">
+                <input 
+                id    = "conditions_to_approve[{$condition_name}]"
                         name  = "conditions_to_approve[{$condition_name}]"
                         required
                         type  = "checkbox"
                         value = "1"
-                        class = "ps-shown-by-js"
-                >
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-              </span>
-            </div>
-            <div class="condition-label">
-              <label class="js-terms" for="conditions_to_approve[{$condition_name}]">
-                {$condition nofilter}
+                        class = "ps-shown-by-js">
+                <span class="checkmark"></span>
+                <span class="checkbox-label js-terms" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</span>
               </label>
             </div>
           </li>

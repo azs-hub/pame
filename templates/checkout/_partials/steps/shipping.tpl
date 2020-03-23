@@ -42,7 +42,7 @@
             <div class="delivery-options">
               {foreach from=$delivery_options item=carrier key=carrier_id}
                   <div class="row delivery-option">
-                    <div class="col-sm-1">
+                    <div class="col-xs-1">
                       <label class="radio-inline">
                         <span class="custom-radio custom-container">
                           <input
@@ -56,12 +56,12 @@
                       </label>
                       </span>
                     </div>
-                    <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
+                    <label for="delivery_option_{$carrier.id}" class="col-xs-11 delivery-option-2">
                       <div class="row">
                         <div class="col-sm-5 col-xs-12">
                           <div class="row">
                             {if $carrier.logo}
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 hidden-xs">
                                 <img src="{$carrier.logo}" alt="{$carrier.name}" />
                             </div>
                             {/if}

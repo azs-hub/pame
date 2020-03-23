@@ -60,6 +60,7 @@ ul.cart-items {
     letter-spacing: 1px;
     font-size: 12px;
     padding: 0;
+    white-space: normal;
 }
 .input-group-btn-vertical .btn {
 	padding: 10px;
@@ -262,6 +263,89 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     margin: 4px;
     font-size: 14px;
 }
+/*
+** Order confirmation
+*/
+.page-order-confirmation .card-block {
+    border-bottom: solid 1px #ccc;
+    margin-bottom: 20px;
+}
+.page-order-confirmation .card-block h3.h1 {
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    font-weight: 100;
+    text-shadow: none;
+    letter-spacing: 2px;
+}
+.page-order-confirmation .card-block h3.h1 + p {
+    color: #333;
+}
+.order-confirmation-table {
+    font-size: 14px;
+    text-align: center;
+}
+.order-confirmation-table .details {
+    text-align: left;
+}
+.order-confirmation-table .image img {
+    width: 100%;
+    border: 1px solid gray-lighter;
+    margin-bottom: 1rem;
+}
+#order-confirmation h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#order-items table {
+    width: 100%;
+}
+#order-items table tr td {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+}
+#order-items table tr {
+    height: 20px;
+}
+#order-items table tr td:last-child {
+    text-align: right;
+}
+#order-items table tr.total-value {
+    background-color: #f1f1f1;
+}
+#order-items table tr.total-value td {
+    font-weight: bold;
+}
+#order-details {
+    margin-top: 15px;
+}
+#order-details>.card-title {
+    margin-bottom: 18px;
+}
+#order-details ul {
+    margin-bottom: 12px;
+}
+#order-details ul li {
+    margin-bottom: 10px;
+}
+ul li.product-line-info .label {
+    width: 40%;
+    display: inline-block;
+    text-align: left;
+    white-space: normal;
+}
+ul li.product-line-info .current-price {
+    width: 50%;
+}
+
+#registration-form {
+    margin-top: 20px;
+}
+
 
 @media (max-width: 600px) {
     .reduction {

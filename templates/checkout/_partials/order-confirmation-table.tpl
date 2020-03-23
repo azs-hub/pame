@@ -22,13 +22,13 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="order-items" class="col-md-12">
+<div id="order-items">
   <div class="row">
     {block name='order_items_table_head'}
-      <h3 class="card-title h3 col-md-6 col-12">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 col-md-2 text-md-center _desktop-title">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 col-md-2 text-md-center _desktop-title">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 col-md-2 text-md-center _desktop-title">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="card-title h3 col-sm-6">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
     {/block}
   </div>
 
@@ -44,8 +44,31 @@
           </div>
           <div class="col-sm-4 col-xs-9 details">
             {if $add_product_link}<a href="{$product.url}" target="_blank">{/if}
-              <span>{$product.name}</span>
+              
+              <span  class="product-line-info">
+                <span class="label">{$product.name}</span>
+              </span>
+              
+              <div class="hidden-sm hidden-md hidden-lg">
+                <ul>
+                  <li class="product-line-info">
+                    <span class="label">{l s='Unit price' d='Shop.Theme.Checkout'}</span>
+                    <span class="value">{$product.price}</span>
+
+                  </li>
+                  <li class="product-line-info">
+                    <span class="label">{l s='Quantity' d='Shop.Theme.Checkout'}</span>
+                    <span class="value">{$product.quantity}</span>
+                  </li>
+                  <li class="product-line-info">
+                    <span class="label">{l s='Total products' d='Shop.Theme.Checkout'}</span>
+                  <span class="value">{$product.total}</span>
+                  </li>
+                </ul>
+              </div>
+
             {if $add_product_link}</a>{/if}
+            
             {if is_array($product.customizations) && $product.customizations|count}
               {foreach from=$product.customizations item="customization"}
                 <div class="customizations">
@@ -87,7 +110,7 @@
             {/if}
             {hook h='displayProductPriceBlock' product=$product type="unit_price"}
           </div>
-          <div class="col-sm-6 col-xs-12 qty">
+          <div class="col-sm-6 hidden-xs qty">
             <div class="row">
               <div class="col-xs-4 text-sm-center text-xs-left">{$product.price}</div>
               <div class="col-xs-4 text-sm-center">{$product.quantity}</div>

@@ -234,6 +234,12 @@
 .product-variants-item .custom-select {
     margin-bottom: 13px;
 }
+.product-variants-item .checkmark,
+.product-variants-item .selectmark {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
 
 @media (max-width: 768px) {
     #product .js-qv-mask {

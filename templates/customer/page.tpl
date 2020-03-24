@@ -33,7 +33,7 @@
         {include file='_partials/notifications.tpl'}
       {/block}
     {/block}
-    
+
     {block name='page_content'}
       <!-- Page content -->
     {/block}

@@ -24,26 +24,14 @@
 *}
 {extends 'customer/page.tpl'}
 
-{block name='page_content'}
+{block name='page_title'}
+	{l s='Your personal information' d='Shop.Theme.Customeraccount'}
+{/block}
+{block name='page_title_action'}
+    {include file='customer/_partials/my-account-links.tpl'}
+{/block}
 
-<div class="row">
-    <div class="col-xs-12">
-      <header class="page-header">
-        <nav class="navbar navbar-default">
-          <div class="navbar-header">
-            <ul class="nav navbar-nav">
-              <li class="left">
-                <h1>{block name='page_title'}{l s='Your personal information' d='Shop.Theme.Customeraccount'}{/block}</h1>
-              </li>
-            </ul>
-          </div>
-          {block name='my_account_links'}
-				    {include file='customer/_partials/my-account-links.tpl'}
-				  {/block}
-        </nav>
-      </header>
-    </div>
-  </div>
+{block name='page_content'}
 
 {render file='customer/_partials/customer-form.tpl' ui=$customer_form}
 {/block}

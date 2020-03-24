@@ -30,9 +30,23 @@
 
     {block name='page_header_container'}
       {block name='page_title' hide}
-        <header class="page-header">
-          <h1>{$smarty.block.child}</h1>
-        </header>
+        <div class="row">
+          <div class="col-xs-12">
+            <header class="page-header">
+              <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                  <ul class="nav navbar-nav">
+                    <li class="left">
+                      <h1>{$smarty.block.child}</h1>
+                    </li>
+                  </ul>
+                </div>
+                {block name='page_title_action'}{/block}
+              </nav>
+            </header>
+          </div>
+        </div>
+          
       {/block}
     {/block}
 

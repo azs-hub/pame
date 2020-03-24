@@ -194,8 +194,13 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     display: inline-block;
     line-height: 20px;
     margin-top: 2px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    font-family: 'Droid Serif', serif;
+    color: #333;
     vertical-align: top;
+}
+.addresses-footer {
+    margin-top: 40px;
 }
 #delivery-addresses {
     margin-bottom: 20px;

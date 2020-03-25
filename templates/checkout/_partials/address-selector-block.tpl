@@ -43,8 +43,6 @@
           <div class="address">{$address.formatted nofilter}</div>
           </span>
         </label>
-
-       
       </header>
       <hr>
       <footer class="address-footer">

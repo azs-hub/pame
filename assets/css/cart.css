@@ -174,7 +174,7 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
 }
 .address-item header {
     padding: 20px;
-    background-color: #eee;
+    border: solid 2px #333;
     padding: 15px;
 }
 .address-item hr {
@@ -248,25 +248,26 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     margin-right: 10px;
     vertical-align: middle;
 }
-.payment-options dl {
+dl.data-sheet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.payment-options dd {
+.data-sheet dd {
     font-weight: 500;
 }
-.payment-options dd,
-.payment-options dt {
+.data-sheet dd,
+.data-sheet dt {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 45%;
-    flex: 0 0 45%;
-    background: #f1f1f1;
+    -ms-flex: 0 0 46%;
+    flex: 0 0 46%;
+    background: #fff;
     padding: 10px;
     margin: 4px;
     font-size: 14px;
+    line-height: 10px;
 }
 /*
 ** Order confirmation

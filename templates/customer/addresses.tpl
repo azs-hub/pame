@@ -25,7 +25,7 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
-  {l s='Your personal information' d='Shop.Theme.Customeraccount'}
+  {l s='Your addresses' d='Shop.Theme.Customeraccount'}
 {/block}
 {block name='page_title_action'}
     {include file='customer/_partials/my-account-links.tpl'}

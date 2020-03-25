@@ -21,3 +21,30 @@
     transform: translate(0,7px);
     transition: transform 0.5s;
 }
+
+/*
+** History
+*/
+#history th {
+	font-family: 'Droid Serif', serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+#history td {
+	text-align: center;
+	font-size: 12px;
+}
+.orders .address-alias {
+	text-align: center;
+	display: block;
+}
+.orders .label-pill {
+    display: block;
+    opacity: 0.8;
+    padding: 8px;
+    margin: 10px auto;
+    width: fit-content;
+}

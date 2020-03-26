@@ -48,3 +48,37 @@
     margin: 10px auto;
     width: fit-content;
 }
+#order-products th {
+    font-family: 'Hind', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#order-products td {
+    font-size: 15px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: middle;
+}
+#order-products td:first-child {
+	text-align: left;
+}
+#order-products td strong {
+	font-size: 14px;
+}
+#order-products td div.value {
+	font-size: 12px;
+}
+#order-products tfoot {
+	background-color: #f3eae5;
+}
+#order-products tfoot td:first-child {
+	font-weight: 400;
+}
+
+.messages .message {
+	border-left: solid 2px #ccc;
+	margin-bottom: 20px;
+}

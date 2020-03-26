@@ -272,18 +272,18 @@ dl.data-sheet {
 /*
 ** Order confirmation
 */
-.page-order-confirmation .card-block {
+.card .card-block {
     border-bottom: solid 1px #ccc;
     margin-bottom: 20px;
 }
-.page-order-confirmation .card-block h3.h1 {
+.card .card-title {
     font-family: 'Droid Serif', serif;
     font-size: 16px;
     font-weight: 100;
     text-shadow: none;
     letter-spacing: 2px;
 }
-.page-order-confirmation .card-block h3.h1 + p {
+.card .card-title + p {
     color: #333;
 }
 .order-confirmation-table {

@@ -78,6 +78,9 @@
 	font-weight: 400;
 }
 
+#order-return-form {
+	margin-bottom: 40px;
+}
 .messages .message {
 	border-left: solid 2px #ccc;
 	margin-bottom: 20px;

@@ -32,64 +32,34 @@
 
   {if $ordersReturn && count($ordersReturn)}
 
-    <h6>{l s='Here is a list of pending merchandise returns' d='Shop.Theme.Customeraccount'}</h6>
-
-    <table class="table table-striped table-bordered hidden-sm-down">
-      <thead class="thead-default">
-        <tr>
-          <th>{l s='Order' d='Shop.Theme.Customeraccount'}</th>
-          <th>{l s='Return' d='Shop.Theme.Customeraccount'}</th>
-          <th>{l s='Package status' d='Shop.Theme.Customeraccount'}</th>
-          <th>{l s='Date issued' d='Shop.Theme.Customeraccount'}</th>
-          <th>{l s='Returns form' d='Shop.Theme.Customeraccount'}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {foreach from=$ordersReturn item=return}
-          <tr>
-            <td><a href="{$return.details_url}">{$return.reference}</a></td>
-            <td><a href="{$return.return_url}">{$return.return_number}</a></td>
-            <td>{$return.state_name}</td>
-            <td>{$return.return_date}</td>
-            <td class="text-sm-center">
-              {if $return.print_url}
-                <a href="{$return.print_url}">{l s='Print out' d='Shop.Theme.Actions'}</a>
-              {else}
-                -
-              {/if}
-            </td>
-          </tr>
-        {/foreach}
-      </tbody>
-    </table>
-    <div class="order-returns hidden-md-up">
+    <div class="order-returns row">
       {foreach from=$ordersReturn item=return}
-        <div class="order-return">
-          <ul>
-            <li>
-              <strong>{l s='Order' d='Shop.Theme.Customeraccount'}</strong>
-              <a href="{$return.details_url}">{$return.reference}</a>
-            </li>
-            <li>
-              <strong>{l s='Return' d='Shop.Theme.Customeraccount'}</strong>
-              <a href="{$return.return_url}">{$return.return_number}</a>
-            </li>
-            <li>
-              <strong>{l s='Package status' d='Shop.Theme.Customeraccount'}</strong>
-              {$return.state_name}
-            </li>
-            <li>
-              <strong>{l s='Date issued' d='Shop.Theme.Customeraccount'}</strong>
-              {$return.return_date}
-            </li>
+        <article class="address-item col-xs-12 col-sm-6 col-md-3">
+          <header class="h4">
+            <label class="radio-inline">
+                <a href="{$return.details_url}">
+                  <span class="address-alias h4">{$return.reference}</span>
+                </a>
+              <div class="address">
+                  <strong>{l s='Return' d='Shop.Theme.Customeraccount'}</strong>
+                  {$return.return_number}<br/>
+                  <strong>{l s='Package status' d='Shop.Theme.Customeraccount'}</strong>
+                  {$return.state_name}<br/>
+                  <strong>{l s='Date issued' d='Shop.Theme.Customeraccount'}</strong>
+                  {$return.return_date}<br/>
+              </div>
+              </span>
+            </label>
+          </header>
+          <hr>
+          <footer class="address-footer">
+            <a href="{$return.details_url}" class="edit-address text-muted">{l s='Detail' d='Shop.Theme.Actions'}</span>
+            </a>
             {if $return.print_url}
-              <li>
-                <strong>{l s='Returns form' d='Shop.Theme.Customeraccount'}</strong>
-                <a href="{$return.print_url}">{l s='Print out' d='Shop.Theme.Actions'}</a>
-              </li>
+              <a href="{$return.print_url}" class="edit-address text-muted">| {l s='Print out' d='Shop.Theme.Actions'}</a>
             {/if}
-          </ul>
-        </div>
+          </footer>
+        </article>
       {/foreach}
     </div>
 

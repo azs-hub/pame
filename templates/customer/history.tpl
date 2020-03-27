@@ -37,8 +37,7 @@
 
     <div class="orders row">
       {foreach from=$orders item=order}
-
-      <article class="address-item col-xs-4">
+      <article class="address-item col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <header class="h4">
           <span class="address-alias h4">{$order.details.reference}</span>
           <span

@@ -350,6 +350,13 @@ ul li.product-line-info .current-price {
 #registration-form {
     margin-top: 20px;
 }
+.promo-code input {
+    width: 100%;
+}
+.promo-code button {
+    float: right;
+    margin-top: 10px;
+}
 
 
 @media (max-width: 600px) {

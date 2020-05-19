@@ -36,7 +36,6 @@
       {/foreach}
     </ul>
     {else}
-      <span class="no-items">{l s='There are no more items in your cart' d='Shop.Theme.Checkout'}</span>
       <div class="alert alert-warning" role="alert">
         {$cart.minimalPurchaseRequired}
       </div>

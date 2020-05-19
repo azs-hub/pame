@@ -26,7 +26,6 @@ $(document).ready(function () {
 	     * if errorMsg is not empty or if notifications are shown, we have error to display
 	     * if hasError is true, quantity was not updated : we don't disable checkout button
 	     */
-	     console.log('switchErrorStat : ', errorMsg);
 	    const $checkoutBtn = $('.checkout a');
 	    if ($("#notifications article.alert-danger").length || ('' !== errorMsg && !hasError)) {
 	      $checkoutBtn.addClass('disabled');
@@ -69,6 +68,8 @@ $(document).ready(function () {
 		event.preventDefault();
 
 		var $target = $(event.currentTarget);
+		// $target.addClass("disabled");
+		// console.log($target)
     	var dataset = event.currentTarget.dataset;
     	let cartAction = parseCartAction($target, event.namespace);
 	    let requestData = {
@@ -89,10 +90,10 @@ $(document).ready(function () {
 		        promises.push(jqXHR);
 		      }
 		    }).then(function (resp) {
-		      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
+		      // CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
 		      var $quantityInput = $target.parent().children(productLineInCartSelector);
 		      $quantityInput.val(resp.quantity);
-		      CheckUpdateQuantityOperations.switchErrorStat();
+		      // CheckUpdateQuantityOperations.switchErrorStat();
 		      
 		      prestashop.emit('updateCart', {
 		        reason: dataset

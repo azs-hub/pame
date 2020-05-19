@@ -1,6 +1,9 @@
 ul.cart-items {
     padding-left: 0px;
 }
+.cart-grid-header .btn {
+    text-transform: uppercase;
+}
 .cart-summary-line {
     font-size: 15px;
     line-height: 33px;

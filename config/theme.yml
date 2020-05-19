@@ -54,6 +54,9 @@ assets:
       - id: cart-js
         path: assets/js/cart.js
         position: bottom
+      - id: thumbnails-js
+        path: assets/js/thumbnails.js
+        position: bottom
 
    # ps_featuredproducts:
    #   - id: home-style

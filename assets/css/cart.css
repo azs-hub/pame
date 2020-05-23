@@ -464,7 +464,12 @@ ul li.product-line-info .current-price {
 #blockcart-modal .cart-content .cart-content-btn .btn {
     white-space: inherit;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 #blockcart-modal .cart-content .cart-content-btn button {
     margin-right: .9rem;
+}
+#blockcart-modal .cart-content .cart-content-btn .btn-primary:hover {
+    background-color: #000;
+    color: #fff;
 }

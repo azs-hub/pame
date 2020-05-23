@@ -3,6 +3,7 @@ ul.cart-items {
 }
 .cart-grid-header .btn {
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .cart-summary-line {
     font-size: 15px;
@@ -361,7 +362,6 @@ ul li.product-line-info .current-price {
     margin-top: 10px;
 }
 
-
 @media (max-width: 600px) {
     .reduction {
         min-width: 100%;
@@ -380,4 +380,91 @@ ul li.product-line-info .current-price {
     .cart-grid-header .navbar-nav {
         margin: 0;
     }
+}
+
+/*
+** Modal
+*/
+#blockcart-modal .modal-header {
+    font-family: 'Hind', sans-serif;
+    text-transform: uppercase;
+    margin-top: 0px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #999;
+}
+#blockcart-modal .modal-header button.close {
+    font-size: 12px;
+}
+#blockcart-modal .modal-body {
+    background: #fff;
+    padding: 1.875rem;
+}
+#blockcart-modal .divide-right {
+    border-right: 1px solid #dbdbdb;
+}
+#blockcart-modal .product-line-grid {
+    display: table;
+    width: 100%;
+}
+#blockcart-modal .product-image {
+    display: table-cell;
+    width: 40%;
+}
+#blockcart-modal .product-image img {
+    width: 100%;
+}
+#blockcart-modal .product-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+#blockcart-modal .product-info {
+    display: table-cell;
+    width: 60%;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+/*#blockcart-modal .product-price {
+    color: #363a42;
+    display: block;
+}*/
+#blockcart-modal .modal-body .divide-right span {
+    display: inline-block;
+    margin-bottom: .3125rem;
+}
+#blockcart-modal .cart-content {
+    padding-left: 2.5rem;
+}
+#blockcart-modal .cart-content p {
+    color: #363a42;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+#blockcart-modal .cart-content p.cart-products-count {
+    font-size: 12px;
+    color: #6c868e;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#blockcart-modal .cart-content p.product-total {
+    background-color: #f1f1f1;
+    padding: .5rem;
+}
+#blockcart-modal .cart-content .cart-content-btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+#blockcart-modal .cart-content .cart-content-btn .btn {
+    white-space: inherit;
+    text-transform: uppercase;
+}
+#blockcart-modal .cart-content .cart-content-btn button {
+    margin-right: .9rem;
 }

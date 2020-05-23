@@ -25,6 +25,8 @@ $(document).ready(function () {
   var showModal = prestashop.blockcart.showModal || function (modal) {
     var $body = $('body');
     $body.append(modal);
+
+    $('#blockcart-modal').modal('show');
     
     $body.on('click', '#blockcart-modal', function (event) {
       if (event.target.id === 'blockcart-modal') {
@@ -47,8 +49,9 @@ $(document).ready(function () {
             action: event.reason.linkAction
           };
         }
-
+        console.log('cart update');
         $.post(refreshURL, requestData).then(function (resp) {
+          console.log(resp);
           $('.blockcart').replaceWith($(resp.preview).find('.blockcart'));
           if (resp.modal) {
             showModal(resp.modal);

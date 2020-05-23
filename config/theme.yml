@@ -49,8 +49,8 @@ assets:
         path: assets/js/jquery.js
         position: head
       - id: bootstrap-lib
-        path: assets/js/bootstrap.js
-        position: head
+        path: assets/js/bootstrap.min.js
+        position: bottom
       - id: cart-js
         path: assets/js/cart.js
         position: bottom

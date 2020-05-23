@@ -23,7 +23,11 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="modal fade js-product-images-modal" id="product-modal">
-  <div class="modal-dialog" role="document">
+<!--
+    You may use this file for the product images zoom. It's updated in AJAX when you select another combination.
+  -->
+  
+<!--   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
         {assign var=imagesCount value=$product.images|count}
@@ -55,6 +59,6 @@
           {/if}
         </aside>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+    </div>
+  </div> -->
 </div><!-- /.modal -->

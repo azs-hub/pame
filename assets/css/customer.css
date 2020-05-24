@@ -21,7 +21,6 @@
     transform: translate(0,7px);
     transition: transform 0.5s;
 }
-
 /*
 ** History
 */
@@ -77,7 +76,6 @@
 #order-products tfoot td:first-child {
 	font-weight: 400;
 }
-
 #order-return-form {
 	margin-bottom: 40px;
 }

@@ -426,10 +426,6 @@ ul li.product-line-info .current-price {
     padding-left: 10px;
     vertical-align: middle;
 }
-/*#blockcart-modal .product-price {
-    color: #363a42;
-    display: block;
-}*/
 #blockcart-modal .modal-body .divide-right span {
     display: inline-block;
     margin-bottom: .3125rem;

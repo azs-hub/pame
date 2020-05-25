@@ -34,29 +34,33 @@
 
     <div class="order-returns row">
       {foreach from=$ordersReturn item=return}
-        <article class="address-item col-xs-12 col-sm-6 col-md-3">
-          <header class="h4">
-            <label class="radio-inline">
-                <a href="{$return.details_url}">
-                  <span class="address-alias h4">{$return.reference}</span>
-                </a>
-              <div class="address">
-                  <strong>{l s='Return' d='Shop.Theme.Customeraccount'}</strong>
-                  {$return.return_number}<br/>
-                  <strong>{l s='Package status' d='Shop.Theme.Customeraccount'}</strong>
-                  {$return.state_name}<br/>
-                  <strong>{l s='Date issued' d='Shop.Theme.Customeraccount'}</strong>
-                  {$return.return_date}<br/>
-              </div>
-              </span>
-            </label>
-          </header>
-          <hr>
-          <footer class="address-footer">
-            <a href="{$return.details_url}" class="edit-address text-muted">{l s='Detail' d='Shop.Theme.Actions'}</span>
+        <article class="customer-card col-xs-12 col-sm-6 col-md-3">
+          <a href="{$return.details_url}" class="title">{$return.reference}</a>
+
+          <table class="table">
+            <tr>
+              <td class="name">{l s='Return' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$return.return_number}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Package status' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$return.state_name}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Date issued' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$return.return_date}</td>
+            </tr>
+          </table>
+          <hr />
+          <div class="action">
+            <a href="{$return.details_url}" class="edit-address text-muted" title="{l s='Details' d='Shop.Theme.Customeraccount'}"
+            data-toggle="tooltip" data-placement="bottom" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
+              <span class="ti-pencil"></span>
             </a>
             {if $return.print_url}
-              <a href="{$return.print_url}" class="edit-address text-muted">| {l s='Print out' d='Shop.Theme.Actions'}</a>
+              <a href="{$return.print_url}" class="edit-address text-muted"
+               data-toggle="tooltip" data-placement="bootom" title="{l s='Print out' d='Shop.Theme.Actions'}">
+              <span class="ti-printer"></span>
             {/if}
           </footer>
         </article>

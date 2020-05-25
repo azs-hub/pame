@@ -127,7 +127,7 @@
               bootstrap-touchspin-down"
               href="#"
               data-action="{$product.down_quantity_url}">
-                <span class="glyphicon glyphicon-menu-down"></span>
+                <span class="ti-angle-down"></span>
               </a>
             </div>
             
@@ -143,7 +143,7 @@
               href="#"
               class="btn-sm btn-touchspin js-touchspin js-increase-product-quantity  bootstrap-touchspin-up"
               data-action="{$product.up_quantity_url}">
-                <span class="glyphicon glyphicon-menu-up"></span>
+                <span class="ti-angle-up"></span>
               </a> 
             </div>
 
@@ -173,7 +173,7 @@
             data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
         >
           {if !isset($product.is_gift) || !$product.is_gift}
-          <span class="glyphicon glyphicon-trash"></span>
+          <span class="ti-trash"></span>
           {/if}
         </a>
 

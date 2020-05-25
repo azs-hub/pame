@@ -169,7 +169,6 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
 #customer-form p .font-weight-bold {
     font-size: 14px;
 }
-
 /*
 ** Adresse
 */
@@ -177,9 +176,9 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     display: none;
 }
 .address-item header {
-    padding: 20px;
-    border: solid 2px #333;
+    border: solid 1px #333;
     padding: 15px;
+    height: 250px;
 }
 .address-item hr {
     margin: 0px;
@@ -269,9 +268,9 @@ dl.data-sheet {
     flex: 0 0 46%;
     background: #fff;
     padding: 10px;
-    margin: 4px;
-    font-size: 14px;
-    line-height: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 /*
 ** Order confirmation
@@ -293,6 +292,8 @@ dl.data-sheet {
 .order-confirmation-table {
     font-size: 14px;
     text-align: center;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 .order-confirmation-table .details {
     text-align: left;
@@ -302,12 +303,16 @@ dl.data-sheet {
     border: 1px solid gray-lighter;
     margin-bottom: 1rem;
 }
+#order-confirmation h3:first-child {
+    text-align: left;
+}
 #order-confirmation h3 {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 #order-items table {
     width: 100%;
@@ -325,7 +330,7 @@ dl.data-sheet {
     text-align: right;
 }
 #order-items table tr.total-value {
-    background-color: #f1f1f1;
+    background-color: #f3eae5;
 }
 #order-items table tr.total-value td {
     font-weight: bold;
@@ -392,10 +397,11 @@ ul li.product-line-info .current-price {
     letter-spacing: 3px;
     font-weight: 600;
     font-size: 11px;
-    color: #999;
+    color: #333;
 }
 #blockcart-modal .modal-header button.close {
     font-size: 12px;
+    opacity: 1;
 }
 #blockcart-modal .modal-body {
     background: #fff;
@@ -431,7 +437,8 @@ ul li.product-line-info .current-price {
     margin-bottom: .3125rem;
 }
 #blockcart-modal .cart-content {
-    padding-left: 2.5rem;
+    background-color: #f3eae5;
+    padding: 30px;
 }
 #blockcart-modal .cart-content p {
     color: #363a42;
@@ -448,24 +455,31 @@ ul li.product-line-info .current-price {
     font-weight: 100;
     text-transform: uppercase;
 }
-#blockcart-modal .cart-content p.product-total {
-    background-color: #f1f1f1;
-    padding: .5rem;
-}
-#blockcart-modal .cart-content .cart-content-btn {
+#blockcart-modal .cart-content-btn {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin-top: 20px;
+    width: 100%;
 }
-#blockcart-modal .cart-content .cart-content-btn .btn {
+#blockcart-modal .cart-content-btn a.btn {
+    border: solid 1px #333;
+    background-color: #333;
+    color: #fff;
+}
+#blockcart-modal .cart-content-btn .btn {
     white-space: inherit;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border: solid 1px #333;
+    background-color: #fff;
+    color: #333;
+    flex: auto;
 }
-#blockcart-modal .cart-content .cart-content-btn button {
+#blockcart-modal .cart-content-btn button {
     margin-right: .9rem;
 }
-#blockcart-modal .cart-content .cart-content-btn .btn-primary:hover {
+#blockcart-modal .cart-content-btn .btn-primary:hover {
     background-color: #000;
     color: #fff;
 }

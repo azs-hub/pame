@@ -30,7 +30,7 @@
         {if $product.cover}
           <a href="{$product.canonical_url}" class="thumbnail product-thumbnail">
             <div class="hover_bg">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              <span class="ti-plus" aria-hidden="true"></span>
             </div>
             <img
               src="{$product.cover.bySize.home_default.url}"
@@ -41,7 +41,7 @@
         {else}
           <a href="{$product.canonical_url}" class="thumbnail product-thumbnail">
             <div class="hover_bg"></div>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            <span class="ti-plus" aria-hidden="true"></span>
             <img src="{$urls.no_picture_image.bySize.home_default.url}" />
           </a>
         {/if}

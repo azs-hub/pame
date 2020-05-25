@@ -32,7 +32,7 @@
               {foreach from=$cart.vouchers.added item=voucher}
                 <li class="cart-summary-line">
                   <span class="label">
-                    <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><span class="ti-close"></span></a>
                     {$voucher.name}
                   </span>
                   <span class="value">{$voucher.reduction_formatted}</span>

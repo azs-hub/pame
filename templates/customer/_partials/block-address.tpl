@@ -23,27 +23,26 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='address_block_item'}
-  <article id="address-{$address.id}" class="address-item" data-id-address="{$address.id}">
+  <article id="address-{$address.id}" class="customer-card" data-id-address="{$address.id}">
 
-    <header class="h4">
-      <label class="radio-inline">
-          <span class="address-alias h4">{$address.alias}</span>
-        <div class="address">{$address.formatted nofilter}</div>
-        </span>
-      </label>
-    </header>
-    <hr>
+    <a class="title" href="{url entity=address id=$address.id}" data-link-action="edit-address">{$address.alias}</a>
+    <div class="address">{$address.formatted nofilter}</div>
+    
+    <hr />
+
     {block name='address_block_item_actions'}
-    <footer class="address-footer">
+    <div class="action">
         <a
           class="edit-address text-muted"
-          href="{url entity=address id=$address.id}" data-link-action="edit-address"
-        >{l s='Edit' d='Shop.Theme.Actions'} | </a>
+          href="{url entity=address id=$address.id}" data-link-action="edit-address" data-toggle="tooltip" data-placement="bottom" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
+        <span class="ti-pencil"></span>
+        </a>
         <a
           class="delete-address text-muted"
-          href="{url entity=address id=$address.id params=['delete' => 1, 'token' => $token]}" data-link-action="delete-address"
-        >{l s='Delete' d='Shop.Theme.Actions'}</a>
-    </footer>
+          href="{url entity=address id=$address.id params=['delete' => 1, 'token' => $token]}" data-link-action="delete-address" data-toggle="tooltip" data-placement="bottom" title="{l s='Delete' d='Shop.Theme.Actions'}">
+          <span class="ti-trash"></span>
+        </a>
+    </div>
     {/block}
   </article>
 {/block}

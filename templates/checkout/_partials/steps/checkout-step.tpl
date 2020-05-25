@@ -35,7 +35,7 @@
     <h2 class="step-title h3">
       <span class="step-number">{$position} . </span>
       {$title}
-      <span class="step-edit text-muted pull-right edit"><span class="glyphicon glyphicon glyphicon-pencil"></span></span>
+      <span class="step-edit text-muted pull-right edit"><span class="ti-angle-down"></span></span>
     </h2>
 
     <div class="content">

@@ -85,7 +85,7 @@
           {if $customer.is_guest}
             <div class="col-xs-12 col-sm-8">
               <div id="registration-form">
-                <h3><span class="glyphicon glyphicon-menu-right"></span>   {l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h3>
+                <h3><span class="ti-angle-right"></span>   {l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h3>
                   {render file='customer/_partials/customer-form.tpl' ui=$register_form}
               </div>
             </div>

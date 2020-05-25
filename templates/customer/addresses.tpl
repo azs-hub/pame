@@ -42,7 +42,7 @@
   <div class="clearfix"></div>
   <div class="addresses-footer">
     <a href="{$urls.pages.address}" data-link-action="add-address">
-      <span class="glyphicon glyphicon-plus"></span>
+      <span class="ti-plus"></span>
       <span>{l s='Create new address' d='Shop.Theme.Actions'}</span>
     </a>
   </div>

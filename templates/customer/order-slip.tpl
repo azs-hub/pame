@@ -32,29 +32,30 @@
   {if $credit_slips}
     <div class="row">
     {foreach from=$credit_slips item=slip}
-      <article class="address-item col-xs-12 col-sm-6 col-md-3">
-        <header class="h4">
-          <label class="radio-inline">
-              <a href="{$slip.order_url_details}" data-link-action="view-order-details">
-                <span class="address-alias h4">{$slip.order_reference}</span>
-              </a>
-            <div class="address">
-                <strong>{l s='Credit slip' d='Shop.Theme.Customeraccount'}</strong>
-                {$slip.credit_slip_number}<br/>
-                <strong>{l s='Date' d='Shop.Theme.Customeraccount'}</strong>
-              {$slip.credit_slip_date}<br/>
-                <strong>{l s='Value' d='Shop.Theme.Customeraccount'}</strong>
-              {$slip.amount}<br/>
+      <article class="customer-card col-xs-12 col-sm-6 col-md-3">
+          <a class="title" href="{$slip.order_url_details}" data-link-action="view-order-details">{$slip.order_reference}</a>
 
-            </div>
-            </span>
-          </label>
-        </header>
-        <hr>
-        <footer class="address-footer">
+          <table class="table">
+            <tr>
+              <td class="name">{l s='Credit slip' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$slip.credit_slip_number}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Date' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$slip.credit_slip_date}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Value' d='Shop.Theme.Customeraccount'}</td>
+              <td class="value">{$slip.amount}</td>
+            </tr>
+          </table>
+          <hr />
+          <div class="action">
             <a
               class="edit-address text-muted"
-              href="{$slip.url}">{l s='View credit slip' d='Shop.Theme.Customeraccount'}</a>
+              href="{$slip.url}" data-toggle="tooltip" data-placement="bootom" title="{l s='View credit slip' d='Shop.Theme.Customeraccount'}">
+                <span class="ti-eye"></span>
+            </a>
         </footer>
       </article>
     {/foreach}

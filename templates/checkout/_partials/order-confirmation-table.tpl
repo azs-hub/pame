@@ -36,13 +36,13 @@
 
     {block name='order_confirmation_table'}
       {foreach from=$products item=product}
-        <div class="order-line row">
-          <div class="col-sm-2 col-xs-3">
+        <div class="product-line-grid order-line row">
+          <div class="product-line-grid-left col-xs-2">
             <span class="image">
               <img src="{$product.cover.medium.url}" />
             </span>
           </div>
-          <div class="col-sm-4 col-xs-9 details">
+          <div class="product-line-grid-body col-xs-4">
             {if $add_product_link}<a href="{$product.url}" target="_blank">{/if}
               
               <span  class="product-line-info">
@@ -110,7 +110,7 @@
             {/if}
             {hook h='displayProductPriceBlock' product=$product type="unit_price"}
           </div>
-          <div class="col-sm-6 hidden-xs qty">
+          <div class="product-line-grid-right product-line-actions">
             <div class="row">
               <div class="col-xs-4 text-sm-center text-xs-left">{$product.price}</div>
               <div class="col-xs-4 text-sm-center">{$product.quantity}</div>

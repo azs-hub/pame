@@ -73,7 +73,7 @@
         {/if}
 
         <p class="add-address">
-          <a href="{$new_address_delivery_url}"><span class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
+          <a href="{$new_address_delivery_url}"><span class="ti-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
         </p>
 
         {if $use_same_address && !$cart.is_virtual}
@@ -117,7 +117,7 @@
           {/if}
 
           <p class="add-address">
-            <a href="{$new_address_invoice_url}"><span class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
+            <a href="{$new_address_invoice_url}"><span class="ti-plus" style="margin-right: 10px;"></span>{l s='add new address' d='Shop.Theme.Actions'}</a>
           </p>
         {/if}
 

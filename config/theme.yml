@@ -30,7 +30,8 @@ assets:
     all:
       - id: bootstrap
         path: assets/css/bootstrap.css
-      
+      - id: themify
+        path: assets/css/themify-icons.css
       - id: topnav
         path: assets/css/topnav.css
       - id: mainnav

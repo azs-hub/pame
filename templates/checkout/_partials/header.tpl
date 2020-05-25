@@ -36,8 +36,7 @@
             <div id="mobile_top_menu_wrapper" class="col-xs-5 hidden-md">
               <div class="dropdown">
                 <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
-                  <span class="caret"></span>
+                  <span class="ti-menu" aria-hidden="true"></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   {hook h='displayTop'}

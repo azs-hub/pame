@@ -11,42 +11,19 @@
     padding: 15px;
     margin-bottom: 20px;
 }
-.link-item .glyphicon {
+.links a [class^="ti-"] {
+    display: block;
     padding: 10px;
-    font-size: 14px;
-    color: #333;
-    margin-right: 2px;
+    font-size: 20px;
 }
 .links > a:hover {
     transform: translate(0,7px);
     transition: transform 0.5s;
+    text-decoration: none;
 }
 /*
 ** History
 */
-#history th {
-	font-family: 'Droid Serif', serif;
-    font-weight: 100;
-    font-size: 14px;
-    color: #333;
-    padding: 10px;
-    text-align: center;
-}
-#history td {
-	text-align: center;
-	font-size: 12px;
-}
-.orders .address-alias {
-	text-align: center;
-	display: block;
-}
-.orders .label-pill {
-    display: block;
-    opacity: 0.8;
-    padding: 8px;
-    margin: 10px auto;
-    width: fit-content;
-}
 #order-products th {
     font-family: 'Hind', serif;
     font-weight: 600;
@@ -82,4 +59,74 @@
 .messages .message {
 	border-left: solid 2px #ccc;
 	margin-bottom: 20px;
+}
+
+
+/*
+Customer block element
+*/
+.customer-card {
+    border: solid 1px #333;
+    padding: 15px;
+    min-height: 250px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.customer-card .title:hover {
+    text-decoration: none;
+}
+.customer-card .title {
+    font-size: 20px;
+    display: inline-block;
+    line-height: 20px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    font-family: 'Droid Serif', serif;
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+.customer-card .label-pill {
+    display: block;
+    padding: 8px;
+    margin: 10px auto;
+    width: fit-content;
+    border-radius: 0px;
+}
+.customer-card hr {
+    border-color: #eee;
+}
+.customer-card .table td {
+    border: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.customer-card .table td.name {
+    font-weight: 500;
+}
+.customer-card .table td.value {
+    text-align: left;
+}
+.customer-card .action {
+    text-align: center;
+}
+.customer-card .action a {
+    border-right: solid 1px #eee;
+    display: inline-block;
+    padding: 0px 9px;
+}
+.customer-card .action a:hover {
+    text-decoration: none;
+}
+.customer-card .action a span {
+    font-size: 16px;
+}
+.customer-card .action a:last-child {
+    border: 0px;
+}
+.customer-card .customer-card-content {
+    height: 150px;
+}
+.customer-card .address {
+    letter-spacing: 2px;
 }

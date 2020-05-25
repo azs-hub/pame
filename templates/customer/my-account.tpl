@@ -56,7 +56,7 @@
 
       <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="identity-link" href="{$urls.pages.identity}">
         <span class="link-item">
-          <span class="glyphicon glyphicon-user"></span>
+          <span class="ti-user"></span>
           {l s='Information' d='Shop.Theme.Customeraccount'}
         </span>
       </a>
@@ -64,14 +64,14 @@
       {if $customer.addresses|count}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="addresses-link" href="{$urls.pages.addresses}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-map-marker"></span>
+            <span class="ti-location-arrow"></span>
             {l s='Addresses' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
       {else}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="address-link" href="{$urls.pages.address}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-map-marker"></span>
+            <span class="ti-location-arrow"></span>
             {l s='Add first address' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -80,7 +80,7 @@
       {if !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="history-link" href="{$urls.pages.history}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-calendar"></span>
+            <span class="ti-shopping-cart-full"></span>
             {l s='Order history and details' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -89,7 +89,7 @@
       {if !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="order-slips-link" href="{$urls.pages.order_slip}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-tag"></span>
+            <span class="ti-wallet"></span>
             {l s='Credit slips' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -98,7 +98,7 @@
       {if $configuration.voucher_enabled && !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="discounts-link" href="{$urls.pages.discount}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-gift"></span>
+            <span class="ti-gift"></span>
             {l s='Vouchers' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -107,7 +107,7 @@
       {if $configuration.return_enabled && !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="returns-link" href="{$urls.pages.order_follow}">
           <span class="link-item">
-            <span class="glyphicon glyphicon-upload"></span>
+            <span class="ti-truck"></span>
             {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
           </span>
         </a>

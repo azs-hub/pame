@@ -30,30 +30,40 @@
 
 {block name='page_content'}
   {if $cart_rules}
-    <div class="cart-rules row">
+    <div class="row">
       {foreach from=$cart_rules item=cart_rule}
-        <article class="address-item col-xs-12 col-sm-6 col-md-3">
-          <header class="h4">
-            <label class="radio-inline">
-              <span class="address-alias text-center">{$cart_rule.code}</span>
-              <div class="address">
-                  <strong>{l s='Description' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.name}<br/>
-                  <strong>{l s='Quantity' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.quantity_for_user}<br/>
-                  <strong>{l s='Value' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.value}<br/>
-                  <strong>{l s='Minimum' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.voucher_minimal}<br/>
-                  <strong>{l s='Cumulative' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.voucher_cumulable}<br/>
-                  <strong>{l s='Expiration Date' d='Shop.Theme.Checkout'}</strong>
-                  {$cart_rule.voucher_date}<br/>
-              </div>
-              </span>
-            </label>
-          </header>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <article class="customer-card">
+          <span class="title">{$cart_rule.code}</span>
+
+          <table class="table">
+            <tr>
+              <td class="name">{l s='Description' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.name}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Quantity' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.quantity_for_user}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Value' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.value}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Minimum' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.voucher_minimal}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Cumulative' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.voucher_cumulable}</td>
+            </tr>
+            <tr>
+              <td class="name">{l s='Expiration Date' d='Shop.Theme.Checkout'}</td>
+              <td class="value">{$cart_rule.voucher_date}</td>
+            </tr>
+          </table>
         </article>
+      </div>
       {/foreach}
     </div>
   {/if}

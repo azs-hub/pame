@@ -30,4 +30,8 @@
       {/block}
     {/foreach}
   </div>
+
+  {block name='pagination'}
+    {include file='_partials/pagination.tpl' pagination=$listing.pagination}
+  {/block}
 </div>

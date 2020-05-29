@@ -22,21 +22,19 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<nav class="pagination">
-  <div class="col-md-4">
-    {block name='pagination_summary'}
-      {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
-    {/block}
-  </div>
+<nav class="navigation">
+<div class="row">
 
-  <div class="col-md-6 offset-md-2 pr-0">
+  <div class="col-xs-12">
+    <p>{block name='pagination_summary'}
+      {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
+    {/block}</p>
     {block name='pagination_page_list'}
      {if $pagination.should_be_displayed}
-        <ul class="page-list clearfix text-sm-center">
+        <ul class="pagination">
           {foreach from=$pagination.pages item="page"}
 
-
-            <li {if $page.current} class="current" {/if}>
+            <li {if $page.current} class="active" {/if}>
               {if $page.type === 'spacer'}
                 <span class="spacer">&hellip;</span>
               {else}
@@ -46,9 +44,9 @@
                   class="{if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"
                 >
                   {if $page.type === 'previous'}
-                    <i class="material-icons">&#xE314;</i>{l s='Previous' d='Shop.Theme.Actions'}
+                    <span class="ti-angle-left"></span>
                   {elseif $page.type === 'next'}
-                    {l s='Next' d='Shop.Theme.Actions'}<i class="material-icons">&#xE315;</i>
+                    <span class="ti-angle-right"></span>
                   {else}
                     {$page.page}
                   {/if}
@@ -60,5 +58,5 @@
       {/if}
     {/block}
   </div>
-
+</div>
 </nav>

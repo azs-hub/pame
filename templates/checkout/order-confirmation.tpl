@@ -7,7 +7,7 @@
           <div class="col-md-12">
 
             {block name='order_confirmation_header'}
-              <h3 class="h1 card-title">{l s='Your order is confirmed' d='Shop.Theme.Checkout'}</h3>
+              <h3 class="title">{l s='Your order is confirmed' d='Shop.Theme.Checkout'}</h3>
             {/block}
 
             <p>
@@ -40,7 +40,7 @@
       <div class="row">
         {block name='order_details'}
           <div class="col-sm-6">
-            <h3 class="card-title">{l s='Order details' d='Shop.Theme.Checkout'}</h3>
+            <h3 class="title">{l s='Order details' d='Shop.Theme.Checkout'}</h3>
             <ul>
               <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
               <li>{l s='Payment method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.details.payment]}</li>
@@ -58,7 +58,7 @@
           {if ! empty($HOOK_PAYMENT_RETURN)}
           <div class="col-sm-6">
             <div class="card-block payment-options">
-              <h3 class="card-title">{l s='Payment details' d='Shop.Theme.Checkout'}</h3>
+              <h3 class="title">{l s='Payment details' d='Shop.Theme.Checkout'}</h3>
               {$HOOK_PAYMENT_RETURN nofilter}
             </div>
           </div>

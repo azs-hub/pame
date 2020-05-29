@@ -26,15 +26,15 @@
   <form id="order-return-form" action="{$urls.pages.order_follow}" method="post">
 
     <div class="box hidden-sm-down">
-      <table id="order-products" class="table table-bordered return">
-        <thead class="thead-default">
+      <table id="order-products" class="table return">
+        <thead class="thead-default order-confirmation-table-header">
           <tr>
-            <th class="head-checkbox"><input type="checkbox"/></th>
-            <th>{l s='Product' d='Shop.Theme.Catalog'}</th>
-            <th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
-            <th>{l s='Returned' d='Shop.Theme.Customeraccount'}</th>
-            <th>{l s='Unit price' d='Shop.Theme.Catalog'}</th>
-            <th>{l s='Total price' d='Shop.Theme.Catalog'}</th>
+            <th class="head-checkbox"></th>
+            <th><h3>{l s='Product' d='Shop.Theme.Catalog'}</h3></th>
+            <th><h3>{l s='Quantity' d='Shop.Theme.Catalog'}</h3></th>
+            <th><h3>{l s='Returned' d='Shop.Theme.Customeraccount'}</h3></th>
+            <th><h3>{l s='Unit price' d='Shop.Theme.Catalog'}</h3></th>
+            <th><h3>{l s='Total price' d='Shop.Theme.Catalog'}</h3></th>
           </tr>
         </thead>
         {foreach from=$order.products item=product name=products}
@@ -52,11 +52,13 @@
                 {/foreach}
               {/if}
             </td>
-            <td>
-              <strong>{$product.name}</strong><br/>
+            <td class="product-line-info">
+              <p class="value">{$product.name}</p>
+              <p class="label">
               {if $product.reference}
                 {l s='Reference' d='Shop.Theme.Catalog'}: {$product.reference}<br/>
               {/if}
+              </p>
               {if $product.customizations}
                 {foreach from=$product.customizations item="customization"}
                   <div class="customization">
@@ -137,7 +139,7 @@
             <td class="text-xs-right">{$product.total}</td>
           </tr>
         {/foreach}
-        <tfoot>
+        <tfoot class="order-confirmation-table-footer">
           {foreach $order.subtotals as $line}
             {if $line.value}
               <tr class="text-xs-right line-{$line.type}">
@@ -156,7 +158,7 @@
 
     <div class="card">
       <header>
-        <h3 class="card-title">{l s='Merchandise return' d='Shop.Theme.Customeraccount'}</h3>
+        <h3 class="title">{l s='Merchandise return' d='Shop.Theme.Customeraccount'}</h3>
         <p>{l s='If you wish to return one or more products, please mark the corresponding boxes and provide an explanation for the return. When complete, click the button below.' d='Shop.Theme.Customeraccount'}</p>
       </header>
       <section class="form-fields">

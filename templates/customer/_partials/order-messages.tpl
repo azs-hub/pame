@@ -22,10 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="card row">
+<div class="row">
 {block name='order_messages_table'}
   <div class="messages col-xs-12 col-sm-6 col-lg-7">
-  <h3 class="card-title">{l s='Messages' d='Shop.Theme.Customeraccount'}</h3>
+  <h3 class="title">{l s='Messages' d='Shop.Theme.Customeraccount'}</h3>
   {if $order.messages}
     {foreach from=$order.messages item=message}
       <div class="message">
@@ -41,10 +41,10 @@
 
 {block name='order_message_form'}
   <div class="col-xs-12 col-sm-6 col-lg-5">
-  <section class="order-message-form card">
+  <section class="order-message-form">
     <form action="{$urls.pages.order_detail}" method="post">
       <header>
-        <h3 class="card-title">{l s='Add a message' d='Shop.Theme.Customeraccount'}</h3>
+        <h3 class="title">{l s='Add a message' d='Shop.Theme.Customeraccount'}</h3>
         <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Customeraccount'}</p>
       </header>
 

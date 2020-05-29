@@ -22,10 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="product-line-grid row">
+<!-- <div class="product-line-grid row"> -->
   <!--  product left content: image-->
   <div class="product-line-grid-left col-xs-2">
-    <span class="product-image media-middle">
+    <span class="image product-image media-middle">
       <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
     </span>
   </div>
@@ -110,8 +110,6 @@
     {/if}
   </div>
 
-
-
   <!--  product left body: description -->
   <div class="product-line-grid-right product-line-actions col-xs-6">
   <div class="row">
@@ -187,4 +185,4 @@
   </div>
 
   <div class="clearfix"></div>
-</div>
+<!-- </div> -->

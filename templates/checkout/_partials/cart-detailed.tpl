@@ -25,16 +25,18 @@
 {block name='cart_detailed_product'}
   <div class="cart-overview js-cart" data-refresh-url="{url entity='cart' params=['ajax' => true, 'action' => 'refresh']}">
     {if $cart.products}
-    <ul class="cart-items">
+    <div class="order-confirmation-table">
+    <div class="order-confirmation-table-body">
       {foreach from=$cart.products item=product}
-        <li class="cart-item">
+        <div class="product-line-grid row">
           {block name='cart_detailed_product_line'}
             {include file='checkout/_partials/cart-detailed-product-line.tpl' product=$product}
           {/block}
-        </li>
+        </div>
         {if is_array($product.customizations) && $product.customizations|count >1}<hr>{/if}
       {/foreach}
-    </ul>
+    </div>
+    </div>
     {else}
       <div class="alert alert-warning" role="alert">
         {$cart.minimalPurchaseRequired}

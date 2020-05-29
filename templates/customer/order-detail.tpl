@@ -47,10 +47,10 @@
 {block name='page_content'}
   <div id="order-infos">
     <div class="row">
-      <div class="col-xs-12 col-sm-7 card">
+      <div class="col-xs-12 col-sm-7">
       {block name='order_infos'}
-        <div class="card-block">
-          <h3 class="card-title">
+        <div>
+          <h3 class="title">
             {l
               s='Order Reference %reference% - placed on %date%'
               d='Shop.Theme.Customeraccount'
@@ -80,14 +80,15 @@
               <li>{l s='Message' d='Shop.Theme.Customeraccount'} {$order.details.gift_message nofilter}</li>
             {/if}
           </ul>
+          <hr />
         </div>
-        <div class="card-block">
+        <div>
           {block name='addresses'}
             <div class="row addresses">
               {if $order.addresses.delivery}
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                  <article id="delivery-address" class="box">
-                    <h4 class="card-title">{l s='Delivery address' d='Shop.Theme.Checkout'}</h4>
+                  <article id="delivery-address">
+                    <h4 class="title">{l s='Delivery address' d='Shop.Theme.Checkout'}</h4>
                     <address>
                       <strong>{$order.addresses.delivery.alias}</strong><br/>
                       {$order.addresses.delivery.formatted nofilter}
@@ -97,8 +98,8 @@
               {/if}
 
               <div class="col-lg-6 col-md-6 col-sm-6">
-                <article id="invoice-address" class="box">
-                  <h4 class="card-title">{l s='Invoice address' d='Shop.Theme.Checkout'}</h4>
+                <article id="invoice-address">
+                  <h4 class="title">{l s='Invoice address' d='Shop.Theme.Checkout'}</h4>
                   <address>
                   <strong>{$order.addresses.invoice.alias}</strong><br/>
                   {$order.addresses.invoice.formatted nofilter}</address>
@@ -107,13 +108,14 @@
               <div class="clearfix"></div>
             </div>
           {/block}
+          <hr/>
         </div>
       {/block}
       </div>
       <div class="col-xs-12 col-sm-5 card">
         {block name='order_history'}
-          <section id="order-history" class="card-block">
-            <h3 class="card-title">{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</h3>
+          <section id="order-history">
+            <h3 class="title">{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</h3>
             <table class="table table-striped table-bordered table-labeled hidden-xs-down">
               <thead class="thead-default">
                 <tr>
@@ -136,7 +138,7 @@
             </table>
 
             {if $order.follow_up}
-              <div class="box">
+              <div>
                 <p>{l s='Click the following link to track the delivery of your order' d='Shop.Theme.Customeraccount'}</p>
                 <a href="{$order.follow_up}">{$order.follow_up}</a>
               </div>
@@ -145,8 +147,8 @@
         {/block}
 
         {block name='order_carriers'}
-          <section id="order-carriers" class="card-block">
-            <h3 class="card-title">{l s='Shipping' d='Shop.Theme.Customeraccount'}</h3>
+          <section id="order-carriers">
+            <h3 class="title">{l s='Shipping' d='Shop.Theme.Customeraccount'}</h3>
             {if $order.shipping}
             {foreach from=$order.shipping item=line}
               <div class="shipping-line">
@@ -172,6 +174,7 @@
           {/if}
           </section>
         {/block}
+        <hr/>
       </div>
       
       <div class="clearfix"></div>

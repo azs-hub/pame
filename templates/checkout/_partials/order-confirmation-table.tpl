@@ -22,21 +22,23 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="order-items">
-  <div class="row">
+<div class="order-confirmation-table">
+  <div class="order-confirmation-table-header">
+    <div class="row">
     {block name='order_items_table_head'}
-      <h3 class="card-title h3 col-sm-6">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
-      <h3 class="card-title h3 hidden-xs col-sm-2 text-md-center _desktop-title">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="col-xs-6">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="col-xs-2">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="col-xs-2">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
+      <h3 class="col-xs-2">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
     {/block}
+    </div>
   </div>
 
-  <div class="order-confirmation-table">
+  <div class="order-confirmation-table-body">
 
     {block name='order_confirmation_table'}
       {foreach from=$products item=product}
-        <div class="product-line-grid order-line row">
+        <div class="product-line-grid row">
           <div class="product-line-grid-left col-xs-2">
             <span class="image">
               <img src="{$product.cover.medium.url}" />
@@ -45,26 +47,8 @@
           <div class="product-line-grid-body col-xs-4">
             {if $add_product_link}<a href="{$product.url}" target="_blank">{/if}
               
-              <span  class="product-line-info">
-                <span class="label">{$product.name}</span>
-              </span>
-              
-              <div class="hidden-sm hidden-md hidden-lg">
-                <ul>
-                  <li class="product-line-info">
-                    <span class="label">{l s='Unit price' d='Shop.Theme.Checkout'}</span>
-                    <span class="value">{$product.price}</span>
-
-                  </li>
-                  <li class="product-line-info">
-                    <span class="label">{l s='Quantity' d='Shop.Theme.Checkout'}</span>
-                    <span class="value">{$product.quantity}</span>
-                  </li>
-                  <li class="product-line-info">
-                    <span class="label">{l s='Total products' d='Shop.Theme.Checkout'}</span>
-                  <span class="value">{$product.total}</span>
-                  </li>
-                </ul>
+              <div  class="product-line-info">
+                <p class="value">{$product.name}</p>
               </div>
 
             {if $add_product_link}</a>{/if}
@@ -120,39 +104,57 @@
         </div>
       {/foreach}
 
-      <hr>
-
-      <table>
+      <div class="order-confirmation-table-footer">
         {foreach $subtotals as $subtotal}
           {if $subtotal.type !== 'tax' && $subtotal.label !== null}
-            <tr>
-              <td>{$subtotal.label}</td>
-              <td>{if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}</td>
-            </tr>
+            <div class="row">
+              <div class="col-xs-10"> {$subtotal.label}
+              </div>
+              <div class="col-xs-2">{if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+              </div>
+            </div>
           {/if}
         {/foreach}
 
         {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
-          <tr>
-            <td><span class="text-uppercase">{$totals.total.label}&nbsp;{$labels.tax_short}</span></td>
-            <td>{$totals.total.value}</td>
-          </tr>
-          <tr class="total-value font-weight-bold">
-            <td><span class="text-uppercase">{$totals.total_including_tax.label}</span></td>
-            <td>{$totals.total_including_tax.value}</td>
-          </tr>
-        {else}
-          <tr class="total-value font-weight-bold">
-            <td><span class="text-uppercase">{$totals.total.label}&nbsp;{if $configuration.taxes_enabled}{$labels.tax_short}{/if}</span></td>
-            <td>{$totals.total.value}</td>
-          </tr>
-        {/if}
-        {if $subtotals.tax.label !== null}
-          <tr class="sub taxes">
-            <td><span class="label">{l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}</span>&nbsp;<span class="value">{$subtotals.tax.value}</span></td>
-          </tr>
-        {/if}
-      </table>
+
+          <div class="row">
+            <div class="col-xs-10">
+              {$totals.total.label}&nbsp;{$labels.tax_short}
+            </div>
+            <div class="col-xs-2">
+              {$totals.total.value}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-10">
+              {$totals.total_including_tax.label}
+            </div>
+            <div class="col-xs-2">
+              {$totals.total_including_tax.value}
+            </div>
+          </div>
+          {else}
+          <div class="row">
+            <div class="col-xs-10">
+              {$totals.total.label}&nbsp;{if $configuration.taxes_enabled}{$labels.tax_short}{/if}
+            </div>
+            <div class="col-xs-2">
+              {$totals.total.value}
+            </div>
+          </div>
+          {/if}
+
+          {if $subtotals.tax.label !== null}
+            <div class="row">
+              <div class="col-xs-10">
+                {l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}
+                </div>
+                <div class="col-xs-2">{$subtotals.tax.value}</div>
+            </tr>
+          {/if}
+      </div>
     {/block}
 
   </div>

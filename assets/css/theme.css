@@ -532,7 +532,10 @@ li {
 }
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+select {
 	margin-right: 5%;
 	padding: 5px 10px;
 	border: solid 1px #999;

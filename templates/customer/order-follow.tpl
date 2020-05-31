@@ -34,7 +34,8 @@
 
     <div class="order-returns row">
       {foreach from=$ordersReturn item=return}
-        <article class="customer-card col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <article class="customer-card">
           <a href="{$return.details_url}" class="title">{$return.reference}</a>
 
           <table class="table">
@@ -60,10 +61,11 @@
             {if $return.print_url}
               <a href="{$return.print_url}" class="edit-address text-muted"
                data-toggle="tooltip" data-placement="bootom" title="{l s='Print out' d='Shop.Theme.Actions'}">
-              <span class="ti-printer"></span>
+              <span class="ti-printer"></span></a>
             {/if}
           </footer>
         </article>
+        </div>
       {/foreach}
     </div>
 

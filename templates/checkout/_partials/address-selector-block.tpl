@@ -28,7 +28,7 @@
       class="address-item{if $address.id == $selected} selected{/if} col-xs-4"
       id="{$name|classname}-address-{$address.id}"
     >
-      <header class="h4">
+      <header class="h4 customer-card">
         <label class="radio-inline">
           <span class="custom-radio custom-container">
             <input
@@ -39,26 +39,26 @@
               {if $address.id == $selected}checked{/if}
             >
             <span class="selectmark"></span>
-            <span class="address-alias h4">{$address.alias}</span>
+            <span class="address-alias h4 title">{$address.alias}</span>
           <div class="address">{$address.formatted nofilter}</div>
           </span>
         </label>
+        <hr/>
+        <footer class="address-footer action">
+          {if $interactive}
+            <a
+              class="edit-address text-muted"
+              data-link-action="edit-address"
+              href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}" data-toggle="tooltip" data-placement="bottom" title="{l s='Edit' d='Shop.Theme.Actions'}"
+            ><span class="ti-pencil"></span></a>
+            <a
+              class="delete-address text-muted"
+              data-link-action="delete-address"
+              href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}" data-toggle="tooltip" data-placement="bottom" title="{l s='Delete' d='Shop.Theme.Actions'}"
+            ><span class="ti-trash"></span></a>
+          {/if}
+        </footer>
       </header>
-      <hr>
-      <footer class="address-footer">
-        {if $interactive}
-          <a
-            class="edit-address text-muted"
-            data-link-action="edit-address"
-            href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}"
-          >{l s='Edit' d='Shop.Theme.Actions'} | </a>
-          <a
-            class="delete-address text-muted"
-            data-link-action="delete-address"
-            href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}"
-          >{l s='Delete' d='Shop.Theme.Actions'}</a>
-        {/if}
-      </footer>
     </article>
   {/foreach}
   {if $interactive}

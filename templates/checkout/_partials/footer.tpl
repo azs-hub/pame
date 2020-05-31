@@ -23,7 +23,39 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='footer'}
-<div class="text-sm-center">
-  {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+<div class="footer-container">
+<div class="container">
+	<div class="row">
+        <div class="col-xs-4">
+          {block name='hook_footer'}
+            {hook h='displayFooter'}
+          {/block}
+        </div>
+        <div class="col-xs-4">
+          {block name='hook_footer_social'}
+            {hook h='displayFooterSocial'}
+          {/block}
+        </div>
+        <div class="col-xs-4">
+          {block name='hook_footer_contact'}
+            {hook h='displayFooterContact'}
+          {/block}
+        </div>
+    </div>
+	<div class="row">
+      <div class="col-md-12 footer_subfooter">
+        <p>
+            {block name='copyright_link'}
+              <a class="_blank" href="http://www.prestashop.com" target="_blank">
+                {l s='%copyright% %year% - Ecommerce software by %prestashop%'
+                sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+              </a>
+            {/block}
+          </p>
+          
+          <p>{l s='Thème prestashop réalisé par' d='Shop.Theme.Global'}</p>
+      </div>
+    </div>
+</div>
 </div>
 {/block}

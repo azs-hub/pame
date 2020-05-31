@@ -163,9 +163,6 @@ body#checkout section.checkout-step.-reachable.-complete h2 .step-edit {
     padding: 15px;
     height: 250px;
 }
-.address-item hr {
-    margin: 0px;
-}
 .address-item .address-footer {
     text-align: center;
 }

@@ -25,6 +25,8 @@
               {/if}
             </p>
 
+            <hr/>
+
             {block name='hook_order_confirmation'}
               {$HOOK_ORDER_CONFIRMATION nofilter}
             {/block}
@@ -51,6 +53,7 @@
                 </li>
               {/if}
             </ul>
+            <hr />
           </div>
         {/block}
 
@@ -61,6 +64,7 @@
               <h3 class="title">{l s='Payment details' d='Shop.Theme.Checkout'}</h3>
               {$HOOK_PAYMENT_RETURN nofilter}
             </div>
+            <hr/>
           </div>
           {/if}
         {/block}

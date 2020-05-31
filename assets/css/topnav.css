@@ -145,12 +145,6 @@
   color: #fff;
   text-decoration: underline;
 }
-@media (max-width: 600px) {
-  .user-info a,
-  .user-info a:visited {
-    display: block;
-  }
-}
 /*
 ** LANGUAGE & CUURENCY
 */

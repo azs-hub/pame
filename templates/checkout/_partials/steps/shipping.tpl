@@ -93,24 +93,34 @@
             </div>
 
             {if $recyclablePackAllowed}
-              <span class="custom-checkbox">
-                <input type="checkbox" id="input_recyclable" name="recyclable" value="1" {if $recyclable} checked {/if}>
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                <label for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
-              </span>
+              <label class="">
+                <span class="custom-radio custom-container">
+                  <input
+                    class="input-radio"
+                    type="checkbox" id="input_recyclable" name="recyclable" value="1" {if $recyclable} checked {/if}>
+                  <span class="selectmark"></span>
+                  <span class="checkbox-label">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</span>
+                </span>
+              </label>
             {/if}
 
             {if $gift.allowed}
-              <span class="custom-checkbox">
-                <input class="js-gift-checkbox" id="input_gift" name="gift" type="checkbox" value="1" {if $gift.isGift}checked="checked"{/if}>
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                <label for="input_gift">{$gift.label}</label >
-              </span>
-
+              <label class="">
+                <span class="custom-radio custom-container">
+                  <input
+                    class="input-radio js-gift-checkbox"
+                     id="input_gift" name="gift" type="checkbox" value="1" {if $gift.isGift}checked="checked"{/if}
+                     data-toggle="collapse" data-target="#gift" aria-expanded="false" aria-controls="gift">
+                  <span class="selectmark"></span>
+                  <span class="checkbox-label">{$gift.label}</span>
+                </span>
+              </label>
+              <!-- <div class="collapse" id="collapseExample"> -->
               <div id="gift" class="collapse{if $gift.isGift} in{/if}">
                 <label for="gift_message">{l s='If you\'d like, you can add a note to the gift:' d='Shop.Theme.Checkout'}</label>
                 <textarea rows="2" cols="120" id="gift_message" name="gift_message">{$gift.message}</textarea>
               </div>
+              <!-- </div> -->
             {/if}
 
           </div>

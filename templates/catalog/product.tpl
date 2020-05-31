@@ -65,6 +65,12 @@
             {/block}
           </section>
         {/block}
+          <div class="clearfix"></div>
+          {if $product.is_customizable && count($product.customizations.fields)}
+            {block name='product_customization'}
+              {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
+            {/block}
+          {/if}
         </div>
         <div class="col-xs-7 col-sm-5">
           {block name='page_header_container'}
@@ -132,12 +138,35 @@
                    {block name='product_description'}
                      <div class="product-description">{$product.description nofilter}</div>
                    {/block}
+
+                   {block name='product_quantities'}
+                    {if $product.show_quantities}
+                      <div class="product-quantities">
+                        <label>{l s='In stock' d='Shop.Theme.Catalog'}</label>
+                        <span data-stock="{$product.quantity}" data-allow-oosp="{$product.allow_oosp}">{$product.quantity} {$product.quantity_label}</span>
+                      </div>
+                    {/if}
+                  {/block}
+
+                  {block name='product_availability_date'}
+                    {if $product.availability_date}
+                      <div class="product-availability-date">
+                        <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
+                        <span>{$product.availability_date}</span>
+                      </div>
+                    {/if}
+                  {/block}
+
+                  {block name='product_out_of_stock'}
+                    <div class="product-out-of-stock">
+                      {hook h='actionProductOutOfStock' product=$product}
+                    </div>
+                  {/block}
                  </div>
 
                  {block name='product_details'}
-                  {if $product.show_quantities || $product.availability_date || $product.grouped_features || !empty($product.specific_references) }
-                    {include file='catalog/_partials/product-details.tpl'}
-                  {/if}
+                  {include file='catalog/_partials/product-details.tpl'}
+                  
                  {/block}
 
                  {block name='product_attachments'}
@@ -169,12 +198,6 @@
           {/block}
 
           <div class="product-information">
-
-            {if $product.is_customizable && count($product.customizations.fields)}
-              {block name='product_customization'}
-                {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-              {/block}
-            {/if}
 
             <div class="product-actions">
               {block name='product_buy'}

@@ -496,7 +496,7 @@ label.radio-block {
   content: " *";
 }
 .form-fields input[type=checkbox] + span {
-  display: inline;
+  display: inline-block;
 }
 .form-fields textarea {
   max-width: 100%;
@@ -882,6 +882,9 @@ footer input[type="submit"] {
   font-size: 10px;
   display: inline-block !important;
   width: 80%;
+  vertical-align: top;
+  line-height: 24px;
+  margin-left: 10px
 }
 .selectmark {
   height: 25px;

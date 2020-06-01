@@ -49,17 +49,17 @@ $(document).ready(function () {
             action: event.reason.linkAction
           };
         }
-        console.log('cart update');
+        // console.log('cart update');
         $.post(refreshURL, requestData).then(function (resp) {
-          console.log(resp);
+          console.log(resp.preview);
           $('.blockcart').replaceWith($(resp.preview).find('.blockcart'));
-          if (resp.modal) {
-            showModal(resp.modal);
+          // if (resp.modal) {
+            // showModal(resp.modal);
             
             // modalTimeout = setTimeout(function(resp){ 
             //   hideModal(resp.modal);
             // }, 3000, resp);
-          }
+          // }
         }).fail(function (resp) {
           prestashop.emit('handleError', {eventType: 'updateShoppingCart', resp: resp});
         });

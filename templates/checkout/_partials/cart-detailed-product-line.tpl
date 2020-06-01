@@ -24,7 +24,8 @@
  *}
 <!-- <div class="product-line-grid row"> -->
   <!--  product left content: image-->
-  <div class="product-line-grid-left col-xs-2">
+  <div class="col-xs-12 loader"></div>
+  <div class="product-line-grid-right col-xs-2">
     <span class="image product-image media-middle">
       <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
     </span>
@@ -69,7 +70,6 @@
     {/foreach}
 
     {if is_array($product.customizations) && $product.customizations|count}
-      <br>
       {block name='cart_detailed_product_line_customization'}
         {include file="_partials/modal-customization.tpl" customizations=$product.customizations}
       {/block}

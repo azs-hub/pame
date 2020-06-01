@@ -234,7 +234,9 @@ a.add-to-cart:hover {
     width: 30px;
     line-height: 30px;
 }
-
+.customization a {
+    font-size: 11px;
+}
 .product-customization {
     padding: 10px;
     border: solid 1px #333;

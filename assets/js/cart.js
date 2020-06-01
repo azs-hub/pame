@@ -4,6 +4,9 @@ $(document).ready(function () {
 
 	var promises = [];
 	var productLineInCartSelector = '.js-cart-line-product-quantity';
+	var isUpdateOperation = false;
+	var errorMsg = null;
+	var hasError = false;
 
 	function parseCartAction($target, namespace) {
 	    return {
@@ -11,40 +14,22 @@ $(document).ready(function () {
 	      type: $target.data('link-action')
 	    }
 	}
-
-	var abortPreviousRequests = function () {
-	    var promise;
-	    while (promises.length > 0) {
-	      promise = promises.pop();
-	      promise.abort();
-	    }
-	};
-
+	
 	var CheckUpdateQuantityOperations = {
 	  'switchErrorStat': () => {
 	    /**
 	     * if errorMsg is not empty or if notifications are shown, we have error to display
 	     * if hasError is true, quantity was not updated : we don't disable checkout button
 	     */
-	    const $checkoutBtn = $('.checkout a');
-	    if ($("#notifications article.alert-danger").length || ('' !== errorMsg && !hasError)) {
-	      $checkoutBtn.addClass('disabled');
-	    }
-
 	    if ('' !== errorMsg) {
 	      let strError = ' <article class="alert alert-danger" role="alert" data-alert="danger"><ul><li>' + errorMsg + '</li></ul></article>';
 	      $('#notifications .container').html(strError);
 	      errorMsg = '';
 	      isUpdateOperation = false;
-	      if (hasError) {
-	        // if hasError is true, quantity was not updated : allow checkout
-	        $checkoutBtn.removeClass('disabled');
-	      }
-	    } else if (!hasError && isUpdateOperation) {
+	    } else if (!hasError === false && isUpdateOperation) {
 	      hasError = false;
 	      isUpdateOperation = false;
 	      $('#notifications .container').html('');
-	      $checkoutBtn.removeClass('disabled');
 	    }
 	  },
 	  'checkUpdateOpertation': (resp) => {
@@ -52,7 +37,7 @@ $(document).ready(function () {
 	     * resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
 	     * when resp.hasError=true, quantity is not updated
 	     */
-	    hasError = resp.hasOwnProperty('hasError');
+	    hasError = resp.hasOwnProperty('errors');
 	    let errors = resp.errors || "";
 	    // 1.7.2.x returns errors as string, 1.7.3.x returns array
 	    if (errors instanceof Array) {
@@ -60,7 +45,6 @@ $(document).ready(function () {
 	    } else {
 	      errorMsg = errors;
 	    }
-
 	    isUpdateOperation = true;
 	  }
 	};
@@ -68,15 +52,15 @@ $(document).ready(function () {
 		event.preventDefault();
 
 		var $target = $(event.currentTarget);
-		// $target.addClass("disabled");
-		// console.log($target)
+		var loader = $target.parents(".product-line-grid").find(".loader");
+		loader.addClass("show");
     	var dataset = event.currentTarget.dataset;
     	let cartAction = parseCartAction($target, event.namespace);
 	    let requestData = {
 	      ajax: '1',
 	      action: 'update'
 	    };
-
+	    console.log('cartAction.url ', cartAction.url);
 		if (typeof cartAction === 'undefined') {
 	      return;
 	    }
@@ -90,14 +74,16 @@ $(document).ready(function () {
 		        promises.push(jqXHR);
 		      }
 		    }).then(function (resp) {
-		      // CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
+		      
+		      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
 		      var $quantityInput = $target.parent().children(productLineInCartSelector);
 		      $quantityInput.val(resp.quantity);
-		      // CheckUpdateQuantityOperations.switchErrorStat();
+		      CheckUpdateQuantityOperations.switchErrorStat();
 		      
 		      prestashop.emit('updateCart', {
 		        reason: dataset
 		      });
+		      loader.removeClass("show");
 		      	
 		    }).fail((resp) => {
 		      prestashop.emit('handleError', {
@@ -105,6 +91,7 @@ $(document).ready(function () {
 		        resp: resp,
 		        cartAction: cartAction.type
 		      });
+		      loader.removeClass("show");
 		    });
 	}
 

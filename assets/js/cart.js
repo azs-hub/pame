@@ -14,7 +14,7 @@ $(document).ready(function () {
 	      type: $target.data('link-action')
 	    }
 	}
-	
+
 	var CheckUpdateQuantityOperations = {
 	  'switchErrorStat': () => {
 	    /**
@@ -60,7 +60,6 @@ $(document).ready(function () {
 	      ajax: '1',
 	      action: 'update'
 	    };
-	    console.log('cartAction.url ', cartAction.url);
 		if (typeof cartAction === 'undefined') {
 	      return;
 	    }

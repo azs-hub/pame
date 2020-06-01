@@ -20,7 +20,7 @@ $(document).ready(function () {
   // var modalTimeout;
   var hideModal = prestashop.blockcart.hideModal || function (modal) {
     $('#blockcart-modal').modal('hide');
-    // clearTimeout(modalTimeout);
+    clearTimeout(modalTimeout);
   };
   var showModal = prestashop.blockcart.showModal || function (modal) {
     var $body = $('body');
@@ -49,17 +49,15 @@ $(document).ready(function () {
             action: event.reason.linkAction
           };
         }
-        // console.log('cart update');
         $.post(refreshURL, requestData).then(function (resp) {
-          console.log(resp.preview);
           $('.blockcart').replaceWith($(resp.preview).find('.blockcart'));
-          // if (resp.modal) {
-            // showModal(resp.modal);
+          if (resp.modal) {
+            showModal(resp.modal);
             
-            // modalTimeout = setTimeout(function(resp){ 
-            //   hideModal(resp.modal);
-            // }, 3000, resp);
-          // }
+            modalTimeout = setTimeout(function(resp){ 
+              hideModal(resp.modal);
+            }, 3000, resp);
+          }
         }).fail(function (resp) {
           prestashop.emit('handleError', {eventType: 'updateShoppingCart', resp: resp});
         });

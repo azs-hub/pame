@@ -46,7 +46,7 @@
 	{block name='page_content'}
 	    {block name='register_form_container'}
 	      {$hook_create_account_top nofilter}
-	      <section class="register-form">
+	      <section class="register-form row">
 	        {render file='customer/_partials/customer-form.tpl' ui=$register_form}
 	      </section>
 	    {/block}

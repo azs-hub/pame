@@ -54,6 +54,7 @@
       {block name='content'}
         <section id="content">
           <div class="row">
+            
             <div class="cart-grid-body col-xs-12 col-sm-7 col-md-8">
               {block name='cart_summary'}
                 {render file='checkout/checkout-process.tpl' ui=$checkout_process}
@@ -69,11 +70,12 @@
               {/block}
             </div>
 
+            {block name='hook_reassurance'}
             <div class="col-xs-12">
-              {block name='hook_reassurance'}
-                {hook h='displayReassurance'}
-              {/block}
+              {hook h='displayReassurance'}
             </div>
+            {/block}
+
           </div>
         </section>
       {/block}

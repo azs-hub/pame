@@ -24,12 +24,12 @@
  *}
 {block name='login_form'}
 
-  {block name='login_form_errors'}
-    {include file='_partials/form-errors.tpl' errors=$errors['']}
-  {/block}
+{block name='login_form_errors'}
+  {include file='_partials/form-errors.tpl' errors=$errors['']}
+{/block}
 
-  <form id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post">
-    <div class="col-xs-12 col-sm-6">
+<form id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post">
+  <div class="col-xs-12 col-sm-6">
     <section>
       {block name='login_form_fields'}
         {foreach from=$formFields item="field"}
@@ -45,23 +45,23 @@
         </a>
       </div>
     </section>
-    </div>
-    <div class="col-xs-hidden col-sm-6">
-    
-    </div>
+  </div>
 
-    {block name='login_form_footer'}
-      <footer class="form-footer col-xs-12 text-right clearfix">
-        <input type="hidden" name="submitLogin" value="1">
-        {block name='form_buttons'}
-          <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
-          <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
-          <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
-            {l s='Sign in' d='Shop.Theme.Actions'}
-          </button>
-        {/block}
-      </footer>
-    {/block}
-
-  </form>
+  {block name='login_form_footer'}
+    <footer class="form-footer col-xs-12 clearfix">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+          <input type="hidden" name="submitLogin" value="1">
+          {block name='form_buttons'}
+            <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
+            <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
+            <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
+              {l s='Sign in' d='Shop.Theme.Actions'}
+            </button>
+          {/block}
+        </div>
+      </div>
+    </footer>
+  {/block}
+</form>
 {/block}

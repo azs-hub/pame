@@ -4,7 +4,6 @@
   {hook h='displayPersonalInformationTop' customer=$customer}
 
   {if $customer.is_logged && !$customer.is_guest}
-
     <p class="identity">
       {* [1][/1] is for a HTML tag. *}
       {l s='Connected as [1]%firstname% %lastname%[/1].'
@@ -43,9 +42,7 @@
           {l s='Continue' d='Shop.Theme.Actions'}
         </button>
       </form>
-
     </div>
-
   {else}
     <ul class="nav nav-pills" role="tablist">
       <li class="nav-item {if !$show_login_form}active{/if}">
@@ -92,7 +89,5 @@
         {render file='checkout/_partials/login-form.tpl' ui=$login_form}
       </div>
     </div>
-
-
   {/if}
 {/block}

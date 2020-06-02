@@ -39,7 +39,7 @@
         {/if}
       {/if}
     </label>
-    <div class="col-md-6{if ($field.type === 'radio-buttons')} form-control-valign{/if}">
+    <div class="col-md-10 {if ($field.type === 'radio-buttons')} form-control-valign{/if}">
 
       {if $field.type === 'select'}
 

@@ -41,7 +41,7 @@
         <div class="product-line-grid row">
           <div class="product-line-grid-left col-xs-2">
             <span class="image">
-              <img src="{$product.cover.medium.url}" />
+              <img src="{$product.cover.medium.url}" alt="{$product.name}" />
             </span>
           </div>
           <div class="product-line-grid-body col-xs-4">

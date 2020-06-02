@@ -26,7 +26,7 @@
                       {$field.text}
                     {/if}
                   {elseif $field.type == 'image'}
-                    <img src="{$field.image.small.url}">
+                    <img src="{$field.image.small.url}" alt="{$field.label}">
                   {/if}
                 </div>
               </div>

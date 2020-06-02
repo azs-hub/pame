@@ -72,9 +72,7 @@
               </form>
             {/block}
           </div>
-        </div>
-
-        {if $cart.discounts|count > 0}
+          {if $cart.discounts|count > 0}
           <p class="block-promo promo-highlighted">
             {l s='Take advantage of our exclusive offers:' d='Shop.Theme.Actions'}
           </p>
@@ -88,6 +86,7 @@
             {/foreach}
           </ul>
         {/if}
+        </div>
       </div>
       <div class="clearfix"></div>
     </div>

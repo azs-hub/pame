@@ -31,7 +31,7 @@
         <ul class="clearfix">
           {foreach from=$customizations.fields item="field"}
             <li class="product-customization-item form-group">
-              <label> {$field.label}</label>
+              <label>{$field.label}</label>
               {if $field.type == 'text'}
                 <textarea placeholder="{l s='Your message here' d='Shop.Forms.Help'}" class="product-message form-control" maxlength="250" {if $field.required} required {/if} name="{$field.input_name}"></textarea>
                 <small class="float-xs-right help-block">{l s='250 char. max' d='Shop.Forms.Help'}</small>
@@ -43,7 +43,7 @@
               {elseif $field.type == 'image'}
                 <br>
                 {if $field.is_customized}
-                  <img src="{$field.image.small.url}">
+                  <img src="{$field.image.small.url}" alt="{$field.label}" />
                   <a class="remove-image" href="{$field.remove_image_url}" rel="nofollow"><span class="ti-trash"></span></a>
                 {/if}
                 <span class="custom-file">

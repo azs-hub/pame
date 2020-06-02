@@ -47,7 +47,7 @@
     {block name='login_form_container'}
       <section class="login-form row">
         <div class="hidden-xs col-sm-6">
-        <img src="" alt="/img/login.png" />
+        <img src="" alt="/img/login.png" alt="login" />
         </div>
         
         {render file='customer/_partials/login-form.tpl' ui=$login_form}

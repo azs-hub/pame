@@ -29,38 +29,32 @@
 {/block}
 
 <form id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post">
-  <div class="col-xs-12 col-sm-6">
-    <section>
-      {block name='login_form_fields'}
-        {foreach from=$formFields item="field"}
-          {block name='form_field'}
-            {form_field field=$field}
-          {/block}
-        {/foreach}
-      {/block}
+  <section>
+    {block name='login_form_fields'}
+      {foreach from=$formFields item="field"}
+        {block name='form_field'}
+          {form_field field=$field}
+        {/block}
+      {/foreach}
+    {/block}
 
-      <div class="forgot-password">
-        <a href="{$urls.pages.password}" rel="nofollow">
-          {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
-        </a>
-      </div>
-    </section>
-  </div>
+    <div class="forgot-password">
+      <a href="{$urls.pages.password}" rel="nofollow">
+        {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+      </a>
+    </div>
+  </section>
 
   {block name='login_form_footer'}
-    <footer class="form-footer col-xs-12 clearfix">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-6">
-          <input type="hidden" name="submitLogin" value="1">
-          {block name='form_buttons'}
-            <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
-            <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
-            <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
-              {l s='Sign in' d='Shop.Theme.Actions'}
-            </button>
-          {/block}
-        </div>
-      </div>
+    <footer class="form-footer clearfix">
+      <input type="hidden" name="submitLogin" value="1">
+      {block name='form_buttons'}
+        <a href="{$urls.pages.register}" class="btn btn-primary">{l s='Create an account' d='Shop.Theme.Customeraccount'}</a>
+        <span>{l s='Ou' d='Shop.Theme.Customeraccount'}</span>
+        <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
+          {l s='Sign in' d='Shop.Theme.Actions'}
+        </button>
+      {/block}
     </footer>
   {/block}
 </form>

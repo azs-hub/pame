@@ -34,9 +34,13 @@
 {block name='page_content'}
 
   {if $orders}
-
   <div class="row">
+    {$entered=false}
     {foreach from=$orders item=order}
+    {if $order@index % 4 == 0}
+    </div><div class="row">
+    
+    {/if}
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <article class="customer-card">
         <a class="title" href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">{$order.details.reference}</a>

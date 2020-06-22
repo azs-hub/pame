@@ -24,10 +24,8 @@
  *}
 {block name='address_block_item'}
   <article id="address-{$address.id}" class="customer-card" data-id-address="{$address.id}">
-
     <a class="title" href="{url entity=address id=$address.id}" data-link-action="edit-address">{$address.alias}</a>
     <div class="address">{$address.formatted nofilter}</div>
-    
     <hr />
 
     {block name='address_block_item_actions'}

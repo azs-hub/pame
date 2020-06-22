@@ -137,31 +137,7 @@
                  <div class="tab-pane fade in{if $product.description} active{/if}" id="description" role="tabpanel">
                    {block name='product_description'}
                      <div class="product-description">{$product.description nofilter}</div>
-                   {/block}
-
-                   {block name='product_quantities'}
-                    {if $product.show_quantities}
-                      <div class="product-quantities">
-                        <label>{l s='In stock' d='Shop.Theme.Catalog'}</label>
-                        <span data-stock="{$product.quantity}" data-allow-oosp="{$product.allow_oosp}">{$product.quantity} {$product.quantity_label}</span>
-                      </div>
-                    {/if}
-                  {/block}
-
-                  {block name='product_availability_date'}
-                    {if $product.availability_date}
-                      <div class="product-availability-date">
-                        <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
-                        <span>{$product.availability_date}</span>
-                      </div>
-                    {/if}
-                  {/block}
-
-                  {block name='product_out_of_stock'}
-                    <div class="product-out-of-stock">
-                      {hook h='actionProductOutOfStock' product=$product}
-                    </div>
-                  {/block}
+                   {/block}  
                  </div>
 
                  {block name='product_details'}
@@ -265,7 +241,7 @@
       <div class="col-xs-7 description">
         {$product_manufacturer->short_description nofilter}
       </div>
-      <div class="col-xs-12 col-sm-7 col-sm-offset-3">
+      <div class="col-xs-12 col-sm-7 col-sm-offset-3 description">
         {$product_manufacturer->description nofilter}
       </div>
       {/block}

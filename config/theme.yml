@@ -2,9 +2,9 @@ name: pame
 display_name: PAME
 version: 1.1.0
 author:
-  name: "Anais Siba"
+  name: "codeintrip"
   email: "anais.siba@gmail.com"
-  url: "http://www.codeintrip.com"
+  url: "http://www.codeintrip.me"
 
 meta:
   compatibility:
@@ -94,8 +94,10 @@ global_settings:
       displayHome:
         - ps_featuredproducts
         - ps_customtext
-        # - ps_banner
-        # - ps_imageslider
+        - ps_banner
+        - ps_imageslider
+      displayLeftColumn:
+        - ps_categorytree
       displayFooterlink:
         - ps_linklist
       displayFooter:
@@ -140,3 +142,7 @@ theme_settings:
 
   layouts:
     category: layout-left-column
+    best-sales: layout-left-column
+    new-products: layout-left-column
+    prices-drop: layout-left-column
+    contact: layout-left-column

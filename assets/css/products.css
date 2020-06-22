@@ -8,7 +8,7 @@
     overflow: hidden;
     text-align: center;
     border-bottom: solid 1px #E9E9E9;
-    width: 90%;
+    width: 100%;
     margin: 0 auto 30px auto;
 }
 .products .thumbnail a {
@@ -45,11 +45,11 @@
 }
 .products .thumbnail > img,
 .products .thumbnail a > img {
-	height: 100%;
+	/*height: 100%;
     width: auto;
     max-width: fit-content;
-    position: relative;
-    left: calc(100% - 120%);
+    position: relative;*/
+    /*left: calc(100% - 120%);*/
 }
 .product-title {
 	font-family: 'Droid Serif', serif;
@@ -156,6 +156,12 @@
 	margin-bottom: 10px;
 	font-size: 14px;
 	color: #333;
+}
+.product-description ul {
+    padding-left: 30px;
+}
+.product-description li {
+    list-style: square;
 }
 a.add-to-cart,
 a.add-to-cart:hover {

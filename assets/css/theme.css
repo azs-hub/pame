@@ -694,12 +694,6 @@ footer input[type="submit"] {
 	display: inline-block;
 	margin-right: 10px;
 }
-.ps-social-follow li i, i {
-	width: 25px;
-	height: 25px;
-	display: block;
-}
-
 .custom-text h3 {
   text-transform: uppercase;
   font-size: 15px;

@@ -27,6 +27,11 @@
 {block name='content'}
   <section id="main">
 
+    <section>
+      {block name='product_list_header'}
+      {/block}
+    </section>
+
     <section id="products">
       {if $listing.products|count}
 

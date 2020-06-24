@@ -157,6 +157,9 @@
 	font-size: 14px;
 	color: #333;
 }
+.description img {
+    max-width: 100%;
+}
 .product-description ul {
     padding-left: 30px;
 }
@@ -209,7 +212,7 @@ a.add-to-cart:hover {
     margin-top: 20px;
 }
 .product-manufacturer {
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .product-manufacturer h4 {
     font-family: 'Hind', sans-serif;
@@ -226,6 +229,9 @@ a.add-to-cart:hover {
     letter-spacing: 2px;
     font-weight: lighter;
     margin-top: 5px;
+}
+.product-manufacturer img {
+    max-width: 100%;
 }
 .product-manufacturer .description p {
     font-family: 'Droid Serif', serif;

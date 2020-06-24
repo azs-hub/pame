@@ -230,18 +230,18 @@
         </h3>
       </div>
       {if isset($product_manufacturer->id)}
-      <div class="col-xs-5 col-sm-3">
+      <div class="col-xs-12 col-sm-3">
         {if isset($manufacturer_image_url)}
           <a href="{$product_brand_url}">
-            <img src="{$manufacturer_image_url}" class="img img-thumbnail manufacturer-logo" alt="{$product_manufacturer->name}">
+            <img src="{$manufacturer_image_url}" alt="{$product_manufacturer->name}">
           </a>
         {/if}
+        <div class="description">
+          {$product_manufacturer->short_description nofilter}
+        </div>
       </div>
       {/if}
-      <div class="col-xs-7 description">
-        {$product_manufacturer->short_description nofilter}
-      </div>
-      <div class="col-xs-12 col-sm-7 col-sm-offset-3 description">
+      <div class="col-xs-12 col-sm-9 description">
         {$product_manufacturer->description nofilter}
       </div>
       {/block}

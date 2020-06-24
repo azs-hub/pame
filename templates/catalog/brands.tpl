@@ -32,11 +32,11 @@
     {/block}
 
     {block name='brand_miniature'}
-      <ul>
+      <div class="row">
         {foreach from=$brands item=brand}
           {include file='catalog/_partials/miniatures/brand.tpl' brand=$brand}
         {/foreach}
-      </ul>
+      </div>
     {/block}
 
   </section>

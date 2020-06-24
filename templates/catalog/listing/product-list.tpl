@@ -30,6 +30,7 @@
     <section>
       {block name='product_list_header'}
       {/block}
+      <hr/>
     </section>
 
     <section id="products">

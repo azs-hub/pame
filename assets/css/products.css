@@ -214,6 +214,7 @@ a.add-to-cart:hover {
 .product-manufacturer {
     margin-top: 150px;
 }
+#custom-text h4,
 .product-manufacturer h4 {
     font-family: 'Hind', sans-serif;
     text-transform: uppercase;
@@ -222,6 +223,7 @@ a.add-to-cart:hover {
     font-weight: lighter;
     margin-bottom: 5px;
 }
+#custom-text h3,
 .product-manufacturer h3 {
     font-family: 'Droid Serif', serif;
     text-transform: uppercase;
@@ -233,6 +235,7 @@ a.add-to-cart:hover {
 .product-manufacturer img {
     max-width: 100%;
 }
+#custom-text p,
 .product-manufacturer .description p {
     font-family: 'Droid Serif', serif;
     color: #333;

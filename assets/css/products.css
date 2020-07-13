@@ -237,6 +237,7 @@ a.add-to-cart:hover {
     max-width: 100%;
 }
 #custom-text p,
+#manufacturerTab p,
 .product-manufacturer .description p {
     font-family: 'Droid Serif', serif;
     color: #333;

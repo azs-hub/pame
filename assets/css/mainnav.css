@@ -26,7 +26,7 @@
 .header-top h1,
 .header-top h2,
 #_desktop_logo h2 {
-    font-family: 'Droid Serif', serif;
+    font-family: 'Droid Serif', serif !important;
     text-transform: capitalize;
     color: #e0680e;
     font-size: 16px;

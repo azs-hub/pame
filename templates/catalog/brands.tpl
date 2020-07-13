@@ -27,10 +27,6 @@
 {block name='content'}
   <section id="main">
 
-    {block name='brand_header'}
-      <h1>{l s='Brands' d='Shop.Theme.Catalog'}</h1>
-    {/block}
-
     {block name='brand_miniature'}
       <div class="row">
         {foreach from=$brands item=brand}

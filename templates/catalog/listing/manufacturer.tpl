@@ -26,7 +26,22 @@
 {extends file='catalog/listing/product-list.tpl'}
 
 {block name='product_list_header'}
-  <h1>{l s='List of products by brand %brand_name%' sprintf=['%brand_name%' => $manufacturer.name] d='Shop.Theme.Catalog'}</h1>
-  <div id="manufacturer-short_description">{$manufacturer.short_description nofilter}</div>
-  <div id="manufacturer-description">{$manufacturer.description nofilter}</div>
+  <div id="manufacturer-short_description">
+  	<h3>{l s='List of products by brand %brand_name%' sprintf=['%brand_name%' => $manufacturer.name] d='Shop.Theme.Catalog'}</h3>
+
+    <ul class="nav nav-tabs" role="tablist">
+    	<li role="productsTab" class="active">
+    		<a href="#productsTab" aria-controls="productsTab" role="tab" data-toggle="tab" >Products</a>
+    	</li>
+      <li role="manufacturerTab">
+        <a href="#manufacturerTab" aria-controls="manufacturerTab" role="tab" data-toggle="tab">{l s='En savoir plus' d='Shop.Theme.Global'}</a>
+      </li>
+  	</ul>
+  </div>
 {/block}
+
+{block name='product_manufacturer'}
+   {$manufacturer.description nofilter}
+{/block}
+
+	

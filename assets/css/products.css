@@ -214,6 +214,7 @@ a.add-to-cart:hover {
 .product-manufacturer {
     margin-top: 150px;
 }
+#manufacturer-short_description h3,
 #custom-text h4,
 .product-manufacturer h4 {
     font-family: 'Hind', sans-serif;
@@ -265,6 +266,9 @@ a.add-to-cart:hover {
 }
 .product-customization-item label {
     text-transform: uppercase !important;
+}
+#manufacturer-short_description {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {

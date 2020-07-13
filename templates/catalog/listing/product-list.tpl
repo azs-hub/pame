@@ -27,7 +27,16 @@
 {block name='content'}
   <section id="main">
 
-    <section id="products">
+  {block name='product_list_header'}
+  {/block}
+
+  <div class="tab-content">
+    <section id="manufacturerTab" role="tabpanel" class="tab-pane" id="manufacturer">
+    {block name='product_manufacturer'}
+    {/block}
+    </section>
+
+    <section id="productsTab" role="tabpanel" class="tab-pane active" id="products">
       {if $listing.products|count}
 
         <div>
@@ -47,5 +56,8 @@
       {/if}
     </section>
 
+    {block name='product_list_footer'}
+    {/block}
+  </div>
   </section>
 {/block}

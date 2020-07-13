@@ -450,11 +450,18 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 1.5em;
+  font-size: 1.1em;
+  font-family: 'Hind', sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 100 !important;
 }
 h3,
 .h3 {
-  font-size: 1.1em;
+  font-size: 0.8em;
+  font-family: 'Hind', sans-serif !important;
+  letter-spacing: 2px!important;
+  font-weight: 100 !important;
+  text-transform: uppercase !important;
 }
 h1 a,
 h2 a,

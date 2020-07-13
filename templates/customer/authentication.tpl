@@ -25,37 +25,38 @@
 {extends file='page.tpl'}
 
 {block name='content'}
-<section id="main">
-{block name='page_header_container'}
-  <header class="page-header">
-    {block name='page_header'}
+  <section id="main">
+  {block name='page_header_container'}
+    <header class="page-header">
+      {block name='page_header'}
 
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <ul class="nav navbar-nav">
-          <li>
-            <h1>{block name='page_title'}{l s='Log in to your account' d='Shop.Theme.Customeraccount'}{/block}</h1>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    {/block}
-  </header>
-{/block}
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <li>
+              <h1>{block name='page_title'}{l s='Log in to your account' d='Shop.Theme.Customeraccount'}{/block}</h1>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {/block}
+    </header>
+  {/block}
 
-{block name='page_content'}
+  {block name='page_content'}
     {block name='login_form_container'}
       <section class="login-form row">
-        <div class="hidden-xs col-sm-6">
-        <img src="" alt="/img/login.png" alt="login" />
+        <div class="hidden-xs col-sm-7">
+        <img src="/img/login.jpg" alt="login" alt="login" width="100%"/>
         </div>
-        
-        {render file='customer/_partials/login-form.tpl' ui=$login_form}
+        <div class="col-xs-12 col-sm-5" style="margin-top: 40px;">
+          {render file='customer/_partials/login-form.tpl' ui=$login_form}
+        </div>
         
       </section>
       {block name='display_after_login_form'}
         {hook h='displayCustomerLoginFormAfter'}
       {/block}
     {/block}
-{/block}
+  {/block}
 {/block}

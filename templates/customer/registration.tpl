@@ -47,7 +47,12 @@
 	    {block name='register_form_container'}
 	      {$hook_create_account_top nofilter}
 	      <section class="register-form row">
-	        {render file='customer/_partials/customer-form.tpl' ui=$register_form}
+	        <div class="col-xs-12 col-sm-6">
+	        	{render file='customer/_partials/customer-form.tpl' ui=$register_form}
+	        </div>
+	      	<div class="hidden-xs col-sm-6">
+	          <img src="/img/singin.jpg" alt="login" alt="login" width="100%"/>
+	        </div>
 	      </section>
 	    {/block}
 	{/block}

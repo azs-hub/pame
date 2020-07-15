@@ -26,12 +26,13 @@
 
 {block name='page_header_container'}{/block}
 
-{block name='left_column'}
-  <div id="left-column" class="col-xs-12 col-sm-4 col-md-3">
-    {widget name="ps_contactinfo" hook='displayLeftColumn'}
-  </div>
-{/block}
-
 {block name='page_content'}
-  {widget name="contactform"}
+	<div class="row">
+		<div class="col-xs-5">
+			{widget name="contactform"}
+		</div>
+		<div class="col-xs-7">
+	    	<img src="/img/contact.jpg" alt="contact" width="100%"/>
+	  	</div>
+	</div>
 {/block}

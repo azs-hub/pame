@@ -23,11 +23,11 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<section class="login-form left-column col-xs-9">
+<section>
   <form action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
 
     <header>
-      <h1 class="title">{l s='Send a message' d='Modules.Contactform.Shop'}</h1>
+      <h3>{l s='Send a message' d='Modules.Contactform.Shop'}</h3>
       <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Modules.Contactform.Shop'}</p>
     </header>
 

@@ -24,7 +24,7 @@
 *}
 
 <div class="block-contact">
-  <h4 class="title">{l s='Store information' d='Modules.Contactinfo.Shop'}</h4>
+  <h3>{l s='Store information' d='Modules.Contactinfo.Shop'}</h3>
   {$contact_infos.address.formatted nofilter}
   
   {if $contact_infos.phone}

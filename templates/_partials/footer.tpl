@@ -32,17 +32,17 @@
 <div class="footer-container">
   <div class="container">
     <div class="row">
-        <div class="col-xs-4">
+        <div class="col-xs-6 col-sm-4">
           {block name='hook_footer'}
             {hook h='displayFooter'}
           {/block}
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-6 col-sm-4">
           {block name='hook_footer_social'}
             {hook h='displayFooterSocial'}
           {/block}
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-6 col-sm-4">
           {block name='hook_footer_contact'}
             {hook h='displayFooterContact'}
           {/block}

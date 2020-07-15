@@ -507,7 +507,7 @@ label.radio-block {
 }
 .form-fields textarea {
   max-width: 100%;
-  border-left: solid 1px #999;
+  border: solid 1px #999;
   font-family: 'Hind', sans-serif;
   letter-spacing: 2px;
 }
@@ -536,6 +536,9 @@ li {
 	list-style: none;
 	font-family: 'Hind', sans-serif;
 	letter-spacing: 1px;
+}
+input[type="file"] {
+  border: 0px;
 }
 input[type="text"],
 input[type="email"],
@@ -668,13 +671,6 @@ footer input[type="submit"] {
 	vertical-align: top;
 	line-height: 20px;
 }
-.footer-container .block-contact {
-  font-family: "Hind", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: right;
-  font-size: 10px;
-}
 .footer-container h3,
 .footer-container h4 {
 	text-transform: uppercase;
@@ -684,6 +680,16 @@ footer input[type="submit"] {
   font-size: 16px;
   font-weight: 100;
   margin: 40px 0px 20px 0px;
+}
+.footer-container .block-contact h3 {
+  text-align: right;
+}
+.footer-container .block-contact {
+  text-align: right;
+  font-family: "Hind", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
 }
 .footer-container .ps-social-follow h4,
 .footer-container .ps-social-follow {

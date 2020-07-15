@@ -25,7 +25,7 @@
 
 <section>
 	<div class="row featuredproducts">
-		<div class="col-xs-7 col-sm-5 featured-left">
+		<div class="col-xs-12 col-sm-5 featured-left">
 			<div class="row">
 				<div class="col-xs-12 cover">
 					<img src="{$products[0].cover.large.url}" alt="{$products[0].name}" />
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 
-		<div class="col-xs-5 col-sm-3 featured-middle">
+		<div class="col-xs-12 col-sm-3 featured-middle">
 			<div class="row">
 				<div class="col-xs-12 cover">
 					<a href="{$products[1].url}">
@@ -74,9 +74,9 @@
 			</div>
 		</div>
 
-		<div class="col-xs-10 col-sm-4 col-xs-offset-1 col-sm-offset-0 featured-right">
+		<div class="col-xs-12 col-sm-4 col-sm-offset-0 featured-right">
 			<div class="row">
-				<div class="col-xs-8 col-sm-12 cover">
+				<div class="col-xs-12 cover">
 					<img src="{$products[2].cover.large.url}" alt="{$products[2].name}" />
 					<a href="{$products[2].url}">
 						<span>
@@ -86,7 +86,7 @@
 						</span>
 					</a>
 				</div>
-				<div class="col-xs-4 col-sm-12 custom-text">
+				<div class="col-xs-12 custom-text">
 					<h3>{l s='Philosophie' d='Shop.Theme.Global'}</h3>
 					<h2>{l s='Passionnée' d='Shop.Theme.Global'}</h2>
 					<p>{l s='Nos valeur' d='Shop.Theme.Global'}</p>

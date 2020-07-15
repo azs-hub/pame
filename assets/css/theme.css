@@ -453,12 +453,12 @@ h2,
   font-size: 1.1em;
   font-family: 'Hind', sans-serif !important;
   text-transform: uppercase !important;
-  font-weight: 100 !important;
+  font-weight: 100;
 }
 h3,
 .h3 {
   font-size: 0.8em;
-  font-family: 'Hind', sans-serif !important;
+  /*font-family: 'Hind', sans-serif !important;*/
   letter-spacing: 2px!important;
   font-weight: 100 !important;
   text-transform: uppercase !important;

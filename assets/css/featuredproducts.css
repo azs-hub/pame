@@ -124,3 +124,11 @@
 .featuredproducts .custom-text {
 	text-align: right;
 }
+
+@media (max-width: 768px) {
+	.featuredproducts .featured-middle .cover img,
+	.featuredproducts .featured-middle .cover:nth-child(2n) a > span {
+		width: 100%;
+		height: auto;
+	}
+}

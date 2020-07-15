@@ -53,7 +53,7 @@
     <meta itemprop="url" content="{$product.url}">
 
     <div class="row">
-      <div class="col-xs-5 col-sm-7">
+      <div class="col-xs-12 col-sm-7">
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
@@ -72,7 +72,7 @@
             {/block}
           {/if}
         </div>
-        <div class="col-xs-7 col-sm-5">
+        <div class="col-xs-12 col-sm-5">
           {block name='page_header_container'}
             {block name='page_header'}
               <div class="short-description">{block name='product_description_short'}

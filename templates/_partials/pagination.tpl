@@ -26,9 +26,6 @@
 <div class="row">
 
   <div class="col-xs-12">
-    <p>{block name='pagination_summary'}
-      {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
-    {/block}</p>
     {block name='pagination_page_list'}
      {if $pagination.should_be_displayed}
         <ul class="pagination">

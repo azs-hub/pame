@@ -160,9 +160,6 @@
 .description img {
     max-width: 100%;
 }
-.product-description ul {
-    padding-left: 30px;
-}
 .product-description li {
     list-style: square;
 }
@@ -214,10 +211,11 @@ a.add-to-cart:hover {
 .product-manufacturer {
     margin-top: 150px;
 }
+#manufacturerTab h4,
 #manufacturer-short_description h3,
 #custom-text h4,
 .product-manufacturer h4 {
-    font-family: 'Hind', sans-serif;
+    font-family: 'Hind', sans-serif !important;
     text-transform: uppercase;
     font-size: 15px;
     letter-spacing: 2px;
@@ -225,8 +223,9 @@ a.add-to-cart:hover {
     margin-bottom: 5px;
 }
 #custom-text h3,
+#manufacturerTab h3,
 .product-manufacturer h3 {
-    font-family: 'Droid Serif', serif;
+    font-family: 'Droid Serif', serif !important;
     text-transform: uppercase;
     font-size: 17px;
     letter-spacing: 2px;
@@ -239,7 +238,7 @@ a.add-to-cart:hover {
 #custom-text p,
 #manufacturerTab p,
 .product-manufacturer .description p {
-    font-family: 'Droid Serif', serif;
+    font-family: 'Droid Serif', serif !important;
     color: #333;
 }
 .product-variants-item .custom-select {
@@ -270,6 +269,9 @@ a.add-to-cart:hover {
 }
 #manufacturer-short_description {
     margin-bottom: 20px;
+}
+#manufacturer-short_description .nav {
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {

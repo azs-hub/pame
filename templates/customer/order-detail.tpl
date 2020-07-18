@@ -50,7 +50,7 @@
       <div class="col-xs-12 col-sm-7">
       {block name='order_infos'}
         <div>
-          <h3 class="title">
+          <h3 class="">
             {l
               s='Order Reference %reference% - placed on %date%'
               d='Shop.Theme.Customeraccount'
@@ -88,7 +88,7 @@
               {if $order.addresses.delivery}
                 <div class="col-lg-6 col-md-6 col-sm-6">
                   <article id="delivery-address">
-                    <h4 class="title">{l s='Delivery address' d='Shop.Theme.Checkout'}</h4>
+                    <h4 class="">{l s='Delivery address' d='Shop.Theme.Checkout'}</h4>
                     <address>
                       <strong>{$order.addresses.delivery.alias}</strong><br/>
                       {$order.addresses.delivery.formatted nofilter}
@@ -99,7 +99,7 @@
 
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <article id="invoice-address">
-                  <h4 class="title">{l s='Invoice address' d='Shop.Theme.Checkout'}</h4>
+                  <h4 class="">{l s='Invoice address' d='Shop.Theme.Checkout'}</h4>
                   <address>
                   <strong>{$order.addresses.invoice.alias}</strong><br/>
                   {$order.addresses.invoice.formatted nofilter}</address>
@@ -115,7 +115,7 @@
       <div class="col-xs-12 col-sm-5 card">
         {block name='order_history'}
           <section id="order-history">
-            <h3 class="title">{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</h3>
+            <h3 class="">{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</h3>
             <table class="table table-striped table-bordered table-labeled hidden-xs-down">
               <thead class="thead-default">
                 <tr>
@@ -148,7 +148,7 @@
 
         {block name='order_carriers'}
           <section id="order-carriers">
-            <h3 class="title">{l s='Shipping' d='Shop.Theme.Customeraccount'}</h3>
+            <h3 class="">{l s='Shipping' d='Shop.Theme.Customeraccount'}</h3>
             {if $order.shipping}
             {foreach from=$order.shipping item=line}
               <div class="shipping-line">

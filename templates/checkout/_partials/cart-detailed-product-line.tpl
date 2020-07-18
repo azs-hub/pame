@@ -25,7 +25,7 @@
 <!-- <div class="product-line-grid row"> -->
   <!--  product left content: image-->
   <div class="col-xs-12 loader"></div>
-  <div class="product-line-grid-right col-xs-2">
+  <div class="product-line-grid-right hidden-xs col-sm-2">
     <span class="image product-image media-middle">
       <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
     </span>
@@ -34,6 +34,8 @@
   <!--  product left body: description -->
   <div class="product-line-grid-body col-xs-4">
     <div class="product-line-info">
+      <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}" class="visible-xs-12">
+
       <a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
     </div>
 

@@ -48,6 +48,10 @@
 .product-line-grid-left .product-image img {
     width: 100%;
 }
+.product-line-info img {
+    display: block;
+    margin: 0 auto 20px auto;
+}
 .product-line-info .value {
 	color: #333;
     font-weight: 400;

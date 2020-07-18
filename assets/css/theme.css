@@ -720,7 +720,7 @@ footer input[type="submit"] {
 .custom-text h2 {
   font-size: 30px;
   color: #e0680e;
-  font-family: 'Droid Serif', sans-serif;
+  font-family: 'Droid Serif', sans-serif !important;
   letter-spacing: 1px;
   margin-top: 5px;
 }

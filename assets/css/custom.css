@@ -282,3 +282,16 @@ a.homeslider_nav:focus-within {
   text-decoration: none !important;
   border: 0px;
 }
+@media (max-width: 767px) {
+  .homeslider-container ul li img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .homeslider-container .caption {
+    position: initial;
+    max-width: 100%;
+  }
+  .homeslider_nav {
+    bottom: -50px;
+  }
+}

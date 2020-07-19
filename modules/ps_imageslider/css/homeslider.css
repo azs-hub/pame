@@ -72,3 +72,26 @@
   background-position: right top;
   right: 0;
 }
+.homeslider_tabs {
+    margin-top: 10px;
+    text-align: left;
+}
+.homeslider_tabs li {
+    display: inline;
+    float: none;
+    margin-right: 5px;
+}
+.homeslider_tabs a {
+  background-color: rgba(0,0,0, .8);
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #ccc;
+  background: rgba(0,0,0, .2);
+  display: inline-block;
+  display: block;
+  width: 30px;
+  height: 3px;
+}
+.homeslider_here {
+  background: #e0680e; 
+}

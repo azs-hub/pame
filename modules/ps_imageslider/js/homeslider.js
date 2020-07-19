@@ -28,6 +28,7 @@ jQuery(document).ready(function ($) {
   var homesliderConfig = {
     speed: 500,            // Integer: Speed of the transition, in milliseconds
     timeout: $('.homeslider-container').data('interval'), // Integer: Time between slide transitions, in milliseconds
+    pager: true,             // Boolean: Show navigation, true or false
     nav: true,             // Boolean: Show navigation, true or false
     random: false,          // Boolean: Randomize the order of the slides, true or false
     pause: $('.homeslider-container').data('pause'), // Boolean: Pause on hover, true or false

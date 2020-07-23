@@ -34,7 +34,7 @@
   <!--  product left body: description -->
   <div class="product-line-grid-body col-xs-4">
     <div class="product-line-info">
-      <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}" class="visible-xs-12">
+      <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}" class="visible-xs-12 hidden-sm hidden-md hidden-lg">
 
       <a href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
     </div>

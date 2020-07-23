@@ -589,11 +589,17 @@ header nav.navigation-top li a {
 header nav.main-navigation li a, header nav.category-navigation li a {
 	color: #000;
 }
-
 .header-banner {
   text-align: center;
   background-color: #000;
-  color : #fff;
+  color: #ccc;
+  display: block;
+  margin: 0px;
+  padding: 2px;
+  font-family: "Hind", serif;
+  text-transform: uppercase;
+  font-weight: 100 !important;
+  letter-spacing: 1px;
 }
 .header-nav {
   background-color: #000;

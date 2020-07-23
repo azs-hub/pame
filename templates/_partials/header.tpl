@@ -24,7 +24,7 @@
  *}
 {block name='header_banner'}
   <div class="header-banner">
-    {hook h='displayBanner'}
+    {l s='Free shipping' d='Shop.Global.Banner'}
   </div>
 {/block}
 

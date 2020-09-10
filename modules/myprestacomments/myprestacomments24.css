@@ -1,0 +1,143 @@
+.comments_note div.star, #myprestacommentsBlock div.star {
+    display: inline-block;
+    float: left;
+    width: 24px;
+    height: 24px;
+}
+
+/*.comments_note div.star_on, #myprestacommentsBlock div.star_hover, #myprestacommentsBlock div.star_on {
+    background: url(img/star24.png) no-repeat scroll 0 0 transparent !important;
+}
+
+.comments_note div.star, #myprestacommentsBlock div.star, #myprestacommentsBlock div.star_on {
+    background: url(img/star-no24.png) no-repeat scroll 0 0 transparent
+}
+
+#new_comment_form div.star {
+    display: inline-block;
+    float: left;
+    width: 24px;
+    height: 24px;
+}
+
+#new_comment_form div.star_hover, #new_comment_form div.star_on {
+    background: url(img/star24.png) no-repeat scroll 0 0 transparent !important;
+}
+
+#new_comment_form div.star, #new_comment_form div.star_on {
+    background: url(img/star-no24.png) no-repeat scroll 0 0 transparent
+}*/
+
+
+.comments_note div.star_on::before, #myprestacommentsBlock div.star_hover::before, #myprestacommentsBlock div.star_on::before,
+.comments_note div.star::before, #myprestacommentsBlock div.star::before, #myprestacommentsBlock div.star_on::before,
+#new_comment_form div.star::before, #new_comment_form div.star_on::before,
+#new_comment_form div.star_hover::before, #new_comment_form div.star_on::before {
+    content: "\e60a";
+}
+.comments_note div.star_on, #myprestacommentsBlock div.star_hover, #myprestacommentsBlock div.star_on {
+    /*background: url(img/star.png) no-repeat scroll 0 0 transparent !important;*/
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+
+.comments_note div.star, #myprestacommentsBlock div.star, #myprestacommentsBlock div.star_on {
+    /*background: url(img/star-no.png) no-repeat scroll 0 0 transparent*/
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+
+#new_comment_form div.star {
+    display: inline-block;
+    float: left;
+    width: 32px;
+    height: 32px;
+}
+
+#new_comment_form div.star_hover, #new_comment_form div.star_on {
+    /*background: url(img/star.png) no-repeat scroll 0 0 transparent !important;*/
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+
+#new_comment_form div.star, #new_comment_form div.star_on {
+    /*background: url(img/star-no.png) no-repeat scroll 0 0 transparent*/
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+}
+#new_comment_form div.star_hover,
+.comments_note div.star {
+ color: black;
+}
+ #new_comment_form div.star_on, 
+ #myprestacommentsBlock div.star_on {
+    color: #DE6922;
+ }
+
+.criterions_grade .criterion.star {
+    zoom: 0.5;
+    opacity: 0.8;
+}
+
+#product_comments_block_tab div.comment .star_content {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.comment_product .star_content {
+    width: 120px;
+    display: block;
+    margin: auto !important;
+    float: none !important;
+    padding-top: 5px;
+}
+
+#new_comment_form div.star a, #myprestacommentsBlock .star a {
+    display: none;
+}
+
+#new_comment_form #criterions_list label {
+    display: inline;
+    float: left;
+    margin: 3px 10px 0 60px;
+    text-align: right;
+    min-width: 150px;
+}
+
+.comments_note {
+    width: 120px;
+    margin: auto;
+    font-size: 12px;
+}

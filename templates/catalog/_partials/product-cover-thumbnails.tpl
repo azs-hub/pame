@@ -48,9 +48,19 @@
     <div class="product-cover">
       {block name='product_flags'}
         <ul class="product-flags">
-          {foreach from=$product.flags item=flag}
-            <li class="product-flag {$flag.type}">{$flag.label}</li>
-          {/foreach}
+          {if $product.quantity < 1}
+            <li class="product-flag out-stock">
+              {if $product.show_availability && $product.availability_message}
+                {$product.availability_message}
+              {else}
+                {l s='Vendu' d='Shop.Theme.Catalog'}
+              {/if}
+            </li>
+          {else}
+            {foreach from=$product.flags item=flag}
+              <li class="product-flag {$flag.type}">{$flag.label}</li>
+            {/foreach}
+          {/if}
         </ul>
       {/block}
 

@@ -150,6 +150,7 @@
 	font-size: 60%;
     color: #999;
 }
+#product .tax-shipping-delivery-label,
 #product .product-prices .current-price {
   	letter-spacing: 2px;
 	font-weight: 600;
@@ -159,6 +160,9 @@
 }
 .description img {
     max-width: 100%;
+}
+.product-description ul {
+    padding-left: 10px;
 }
 .product-description li {
     list-style: square;

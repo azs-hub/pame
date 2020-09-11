@@ -91,6 +91,14 @@
     {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
     <div class="tax-shipping-delivery-label">
+      {block name='product_availability_date'}
+        {if $product.availability_date}
+          <div class="product-availability-date">
+            <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
+            <span>{$product.availability_date}</span>
+          </div>
+        {/if}
+      {/block}
       {if $product.additional_delivery_times == 1}
         {if $product.delivery_information}
           <span class="delivery-information">{$product.delivery_information}</span>

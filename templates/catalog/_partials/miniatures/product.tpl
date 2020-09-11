@@ -53,7 +53,11 @@
           <ul class="product-flags">
             {if $product.quantity < 1}
               <li class="product-flag out-stock">
-                {l s='Vendu' d='Shop.Theme.Catalog'}
+                {if $product.show_availability && $product.availability_message}
+                  {$product.availability_message}
+                {else}
+                  {l s='Vendu' d='Shop.Theme.Catalog'}
+                {/if}
               </li>
             {else}
               {foreach from=$product.flags item=flag}

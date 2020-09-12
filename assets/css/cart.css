@@ -368,6 +368,8 @@ ul li.product-line-info .current-price {
         position: relative;
         display: inline-block;
         margin-right: 10px;
+        margin-bottom: 10px;
+
     }
     .cart-grid-header .navbar-nav {
         margin: 0;

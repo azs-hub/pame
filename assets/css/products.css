@@ -297,4 +297,9 @@ a.add-to-cart:hover {
     .product-customization {
         width: 100%;
     }
+    .product-line-actions .col-xs-12 {
+        margin-bottom: 15px;
+    }
+
+    }
 }

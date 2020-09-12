@@ -81,7 +81,7 @@
   <!--  product left body: description -->
   <div class="product-line-grid-right product-line-actions col-xs-6">
   <div class="row">
-    <div class="col-xs-6 qty">
+    <div class="col-xs-12 col-sm-6 qty">
         {if isset($product.is_gift) && $product.is_gift}
           <span class="gift-quantity">{$product.quantity}</span>
         {else}
@@ -117,7 +117,7 @@
           
         {/if}
       </div>
-    <div class="col-xs-4 price">
+    <div class="col-xs-12 col-sm-4 price">
       <span class="product-price">
         {if isset($product.is_gift) && $product.is_gift}
           <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
@@ -126,7 +126,7 @@
         {/if}
       </span>
     </div>
-    <div class="col-md-2 col-xs-2 text-xs-right">
+    <div class="col-xs-12 col-sm-2 text-xs-right">
       <div class="btn-sm cart-line-product-actions">
         <a
             class                       = "remove-from-cart"

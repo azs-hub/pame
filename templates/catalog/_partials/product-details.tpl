@@ -30,6 +30,15 @@
     {/if}
   {/block}
 
+  {block name='product_availability_date'}
+    {if $product.availability_date}
+      <div class="product-availability-date">
+        <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
+        <span>{$product.availability_date}</span>
+      </div>
+    {/if}
+  {/block}
+
   {block name='product_out_of_stock'}
     <div class="product-out-of-stock">
       {hook h='actionProductOutOfStock' product=$product}

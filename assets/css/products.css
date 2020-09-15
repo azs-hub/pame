@@ -158,6 +158,11 @@
 	font-size: 14px;
 	color: #333;
 }
+#product .tax-shipping-delivery-label {
+    font-weight: 100;
+    font-size: 10px;
+    text-transform: uppercase;
+}
 .description img {
     max-width: 100%;
 }

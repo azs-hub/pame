@@ -33,11 +33,11 @@
     <div class="container">
       <div class="row">
         <div class="hidden-sm-down">
-          <div class="hidden-xs col-sm-5 text-left">
+          <div class="hidden-xs col-sm-6 text-left">
             {hook h='displayNav2'}
           </div>
 
-          <div class="col-xs-5 hidden-sm hidden-md hidden-lg text-left">
+          <div class="col-xs-6 hidden-sm hidden-md hidden-lg text-left">
             <div id="mobile_top_menu_wrapper">
               <div class="dropdown">
                 <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="col-xs-7 text-right">
+          <div class="col-xs-6 text-right">
               {hook h='displayNav1'}
           </div>
         </div>

@@ -23,13 +23,8 @@
 {/function}
 
 <div class="menu">
-    <ul class="uppernav">
-      {foreach from=CMS::getCMSPages(1,2,true) item=cmspages}
-      <li>
-        <a href="{$link->getCMSLink($cmspages.id_cms, $cmspages.link_rewrite)|escape:'htmlall':'UTF-8'}">{$cmspages.meta_title|escape:'htmlall':'UTF-8'}</a>
-      </li>
-      {/foreach}
-    </ul>
-
+  <div class="uppernav">
+    {hook h='displayUpperNav'}
+  </div>
     {menu nodes=$menu.children}
 </div>

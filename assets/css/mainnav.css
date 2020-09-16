@@ -75,13 +75,17 @@
   position: absolute;
   z-index: 1337;
 }
-.menu > ul.uppernav {
+.menu .uppernav h3 {
+	display: none;
+}
+.menu .uppernav ul {
 	top: 30px;
 }
-.menu > ul.uppernav > li {
+.menu > .uppernav > ul > li {
 	border: 0px;
     font-size: 10px;
     margin-left: 20px;
+    float: right;
 }
 .menu .uppernav a {
     font-size: 13px;

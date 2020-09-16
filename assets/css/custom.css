@@ -314,3 +314,14 @@ a.homeslider_nav:focus-within {
   color: #333;
   text-decoration: underline;
 }
+@media (max-width: 767px) {
+  .cookiesplus-modal .modal-body {
+    display: block !important;
+  }
+  .cookiesplus-modal .cookie-actions {
+    flex: none;
+    display: block;
+    width: 100%;
+    text-align: center !important;
+  }
+}

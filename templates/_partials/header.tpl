@@ -38,7 +38,7 @@
           </div>
 
           <div class="col-xs-5 hidden-sm hidden-md hidden-lg text-left">
-            <div id="mobile_top_menu_wrapper" class="col-xs-5 hidden-md">
+            <div id="mobile_top_menu_wrapper">
               <div class="dropdown">
                 <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <span class="ti-menu" aria-hidden="true"></span>
@@ -47,6 +47,7 @@
                   {hook h='displayTop'}
                 </div>
               </div>
+              {hook h='displayNav2'}
             </div>
           </div>
 

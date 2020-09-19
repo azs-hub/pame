@@ -244,11 +244,24 @@ a.add-to-cart:hover {
 .product-manufacturer img {
     max-width: 100%;
 }
+.page-cms p,
 #custom-text p,
 #manufacturerTab p,
 .product-manufacturer .description p {
     font-family: 'Droid Serif', serif !important;
     color: #333;
+}
+.page-cms ul,
+#custom-text ul,
+#manufacturerTab ul,
+.product-manufacturer .description ul {
+    padding-left: 10px;
+}
+.page-cms li,
+#custom-text li,
+#manufacturerTab li,
+.product-manufacturer .description li {
+    list-style: circle;
 }
 .product-variants-item .custom-select {
     margin-bottom: 13px;

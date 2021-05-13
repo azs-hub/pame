@@ -28,7 +28,7 @@
 {block name='head_ie_compatibility'}
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 {/block}
-
+<meta property="fb:pages" content="395298537687029" />
 {block name='head_seo'}
   <title>{block name='head_seo_title'}{$page.meta.title}{/block}</title>
   <meta name="description" content="{block name='head_seo_description'}{$page.meta.description}{/block}">
@@ -68,3 +68,24 @@
 {/block}
 
 {block name='hook_extra'}{/block}
+
+{literal} <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134165817-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138305010-1');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4NDMV8D53"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W4NDMV8D53');
+</script>
+{/literal}

@@ -214,6 +214,32 @@ a.add-to-cart:hover {
     width: 80%;
     position: relative;
 }
+#product .product-cover .layer {
+    font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: hsla(0,0%,100%,.5);
+    text-align: center;
+    cursor: pointer;
+}
+#product .product-cover .layer:hover {
+    opacity: 1;
+}
+}
 .product-variants {
     margin-top: 20px;
 }
@@ -244,24 +270,24 @@ a.add-to-cart:hover {
 .product-manufacturer img {
     max-width: 100%;
 }
-.page-cms p,
+#content .page-content.page-cms p,
 #custom-text p,
 #manufacturerTab p,
 .product-manufacturer .description p {
     font-family: 'Droid Serif', serif !important;
     color: #333;
 }
-.page-cms ul,
+#content .page-content.page-cms ul,
 #custom-text ul,
 #manufacturerTab ul,
 .product-manufacturer .description ul {
-    padding-left: 10px;
+    padding-left: 30px;
 }
-.page-cms li,
+#content .page-content.page-cms li,
 #custom-text li,
 #manufacturerTab li,
 .product-manufacturer .description li {
-    list-style: circle;
+    list-style: square;
 }
 .product-variants-item .custom-select {
     margin-bottom: 13px;
@@ -295,6 +321,35 @@ a.add-to-cart:hover {
 #manufacturer-short_description .nav {
     margin-top: 20px;
 }
+/*#product-modal .modal-content {
+    background: transparent;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+#product-modal .modal-content img.product-cover-modal {
+    width: 100%;
+}
+#product-modal li.thumb-container {
+    display: inline-block;
+    width: 20%;
+}
+#product-modal li.thumb-container img {
+    width: 100%;
+}
+#product-modal #thumbnails {
+    text-align: center;
+}*/
 
 @media (max-width: 768px) {
     #product .js-qv-mask {

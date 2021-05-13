@@ -221,6 +221,10 @@
       </div>
     </div>
 
+    {block name='hook_display_reassurance'}
+      {hook h='displayReassurance'}
+    {/block}
+
     <div class="row product-manufacturer">
       {block name='product_reference'}
       <div class="col-xs-12">
@@ -274,9 +278,7 @@
       <footer class="page-footer">
         {block name='page_footer'}
           
-          {block name='hook_display_reassurance'}
-              {hook h='displayReassurance'}
-            {/block}
+          
 
         {/block}
       </footer>

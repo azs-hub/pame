@@ -24,6 +24,20 @@
  *}
 <div class="images-container">
   {block name='product_images'}
+
+
+
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+
+
     <div class="js-qv-mask mask">
       <ul class="product-images js-qv-product-images">
         {foreach from=$product.images item=image}
@@ -73,4 +87,8 @@
     </div>
   {/block}
 </div>
+<!-- <div class="scroll-box-arrows scroll">
+  <i class="ti-angle-left"></i>
+  <i class="ti-angle-right"></i>
+</div> -->
 {hook h='displayAfterProductThumbs'}

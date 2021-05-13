@@ -1,0 +1,27 @@
+[{shop_name} | shop]({shop_url})
+
+Bonjour,
+
+Vous avez reçu une nouvelle demande de retour pour {shop_name}.
+
+Détails du retour
+
+Commande : {order_name} passée le {date}
+
+Client : {firstname} {lastname}, ({email})
+
+Adresse de livraison
+
+{delivery_block_html}
+
+Adresse de facturation
+
+{invoice_block_html}
+
+Référence	Produit	Quantité   {items}
+
+Message du client :
+
+{message}
+
+[{shop_name} | shop]({shop_url})

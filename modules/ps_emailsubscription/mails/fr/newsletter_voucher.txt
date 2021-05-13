@@ -1,0 +1,7 @@
+[{shop_name} | shop]({shop_url})
+
+Bonjour,
+
+Merci de vous êtes abonné à notre newsletter. Nous avons le plaisir de vous offrir le bon de réduction suivant : {discount}
+
+[{shop_name} | shop]({shop_url})

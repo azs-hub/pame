@@ -185,12 +185,13 @@ a.add-to-cart:hover {
 }
 #product #content-wrapper .tabs {
     border-bottom: solid 1px #e8e8e8;
+    margin-bottom: 20px;
 }
 #product #content-wrapper .tabs table tr:first-child * {
     border-top: 0px;
 }
 #product .tab-content {
-    margin: 10px 0px;
+    margin-top: 10px;
 }
 #product .js-qv-mask {
     width: 15%;
@@ -249,7 +250,8 @@ a.add-to-cart:hover {
 #manufacturerTab h4,
 #manufacturer-short_description h3,
 #custom-text h4,
-.product-manufacturer h4 {
+.product-manufacturer h4,
+.product-accessories h4 {
     font-family: 'Hind', sans-serif !important;
     text-transform: uppercase;
     font-size: 15px;
@@ -321,6 +323,23 @@ a.add-to-cart:hover {
 #manufacturer-short_description .nav {
     margin-top: 20px;
 }
+
+.product-accessories {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product-accessories h4 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: solid 1px #999;
+    width: fit-content;
+}
+.product-accessories .products > div {
+    margin-left: -15px;
+}
+
+
 /*#product-modal .modal-content {
     background: transparent;
     background-image: initial;

@@ -7,8 +7,10 @@
 
     thumbnails.on("click", function() {
       var img = $(this).attr('data-image-large-src');
+      console.log('thumbnails js');
       if(cover.attr('src') != img){
         cover.attr('src', img);
+        console.log('thumbnails js _ cover change');
       }
     });
 

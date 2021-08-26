@@ -144,7 +144,6 @@
     font-size: 16px;
     font-family: 'Hind', sans-serif;
     margin-top: 20px;
-    margin-bottom: 40px;
 }
 #product .product-prices small {
 	font-size: 60%;
@@ -193,16 +192,27 @@ a.add-to-cart:hover {
 #product .tab-content {
     margin-top: 10px;
 }
+.thumbnail-slider {
+    position: relative;
+}
 #product .js-qv-mask {
-    width: 15%;
-    float: left;
-    margin-right: 5%;
+    height: 100px;
+    overflow: hidden;
+    margin-left: 22px;
 }
 #product .js-qv-mask ul {
     padding: 0px;
+    width: 12000px;
+    display: block;
+    position: relative;
+    left:0px;
+    transition: left 2s;
 }
 #product .js-qv-mask .thumb-container {
     margin-bottom: 10px;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
 }
 #product .js-qv-mask .thumb-container:last-child {
     margin-bottom: 0px;
@@ -210,10 +220,11 @@ a.add-to-cart:hover {
 #product .js-qv-mask .thumb-container img {
     width: 100%;
 }
+#product .js-qv-mask .thumb-container img.selected {
+    border: solid 1px #333;
+}
 #product .product-cover {
-    float: left;
-    width: 80%;
-    position: relative;
+    width: 100%;
 }
 #product .product-cover .layer {
     font-size: 30px;
@@ -240,6 +251,31 @@ a.add-to-cart:hover {
 #product .product-cover .layer:hover {
     opacity: 1;
 }
+.scroll-box-arrows {
+    /*position: absolute;*/
+    height: 100%;
+    z-index: 10;
+    width: 100%;
+}
+.scroll-box-arrows .ti-angle-right,
+.scroll-box-arrows .ti-angle-left {
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    padding: 0px 5px;
+    line-height: 100px;
+    cursor: pointer;
+    top: 0px;
+}
+.scroll-box-arrows .ti-angle-right{
+    right: 0px;
+
+}
+.scroll-box-arrows .ti-angle-left {
+    left: 0px;
+}
+.product-information {
+    margin-bottom: 20px;
 }
 .product-variants {
     margin-top: 20px;
@@ -372,13 +408,16 @@ a.add-to-cart:hover {
 
 @media (max-width: 768px) {
     #product .js-qv-mask {
-        width: 100%;
+        /*width: 100%;*/
     }
     #product .js-qv-mask .thumb-container {
         margin-bottom: 10px;
-        width: 15%;
+        /*width: 15%;
         float: left;
-        margin-right: 10px;
+        margin-right: 10px;*/
+    }
+    #product .js-qv-mask .thumb-container img {
+
     }
     #product .product-cover {
         width: 100%;

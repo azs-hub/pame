@@ -173,21 +173,25 @@ CATEGORY TREE
 }
 #block-reassurance {
   margin-top: 150px;
+  background-color: rgba(230, 230, 230, 0.1);
+  padding: 50px 0px;
 }
 #block-reassurance > div:before {
     content: "\e239";
     position: relative;
     left: 49%;
     font-family: "Glyphicons Halflings";
-    font-size: 20px;
-    opacity: 0.2;
+    font-size: 50px;
+    opacity: 0.1;
     top: -7px;
 }
 #block-reassurance p {
   font-family: 'Droid Serif', Serif;
   text-align: center;
   letter-spacing: 2px;
-  color: #888;
+  color: #555;
+  margin-top: -35px;
+  font-size: 14px;
 }
 /*
 ** Slideshow

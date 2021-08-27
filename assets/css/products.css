@@ -189,6 +189,10 @@ a.add-to-cart:hover {
 #product #content-wrapper .tabs table tr:first-child * {
     border-top: 0px;
 }
+#product #content-wrapper .tabs .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
 #product .tab-content {
     margin-top: 10px;
 }
@@ -196,9 +200,20 @@ a.add-to-cart:hover {
     position: relative;
 }
 #product .js-qv-mask {
-    height: 100px;
-    overflow: hidden;
+    height: 130px;
+    margin-top: 22px;
     margin-left: 22px;
+    margin-right: 22px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    -ms-scroll-chaining: none;
+    -ms-scroll-snap-type: mandatory;
+    -ms-scroll-snap-points-x: snapInterval(0%, 100%);
+    scrollbar-width: none; 
+}
+#product .js-qv-mask::-webkit-scrollbar {
+  display: none !important;
 }
 #product .js-qv-mask ul {
     padding: 0px;
@@ -206,13 +221,16 @@ a.add-to-cart:hover {
     display: block;
     position: relative;
     left:0px;
-    transition: left 2s;
+    /*transition: left 2s;*/
+    /*white-space: nowrap;*/
 }
 #product .js-qv-mask .thumb-container {
     margin-bottom: 10px;
     display: inline-block;
     width: 100px;
     cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #product .js-qv-mask .thumb-container:last-child {
     margin-bottom: 0px;
@@ -220,8 +238,8 @@ a.add-to-cart:hover {
 #product .js-qv-mask .thumb-container img {
     width: 100%;
 }
-#product .js-qv-mask .thumb-container img.selected {
-    border: solid 1px #333;
+#product .js-qv-mask .thumb-container.selected {
+    border: solid 3px #333;
 }
 #product .product-cover {
     width: 100%;
@@ -430,7 +448,5 @@ a.add-to-cart:hover {
     }
     .product-line-actions .col-xs-12 {
         margin-bottom: 15px;
-    }
-
     }
 }

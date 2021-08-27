@@ -1,55 +1,57 @@
 (function( $ ) {
  
-  $.fn.productCover = function() {
+  $.fn.productCover = function(options) {
 
-    var cover = $('.js-qv-product-cover');
-    var thumbnails = $('.js-qv-mask li img');
+    var defaults = {
+        cover: ".js-qv-product-cover",
+        thumbnailsMask: ".js-qv-mask.mask",
+        nav: false,
+        right: ".scroll-box-arrows .ti-angle-right",
+        left: ".scroll-box-arrows .ti-angle-left",
+    };
+ 
+    var settings = $.extend( {}, defaults, options );
 
-    var right = $('.scroll-box-arrows .ti-angle-right');
-    var left = $('.scroll-box-arrows .ti-angle-left');
+    if (!$(this)[0])
+      return ;
 
-    var size = 0;
-    $(".js-qv-mask.mask").find("li").each(function(){
-      size += $(this).width();
+    var _cover = $(this).find(settings.cover); //".js-qv-product-cover");
+    var _thumbnailsMask = $(this).find(settings.thumbnailsMask); //'.js-qv-mask.mask');
+    var _thumbnails = _thumbnailsMask.find('li');
+
+    // set size of mask
+    var size = 100;
+    _thumbnails.each(function(){
+      size += $(this).outerWidth(true);
     });
-    $('#product .js-qv-mask ul').width(size + 'px');
+    _thumbnailsMask.find('ul').width(size + 'px');
 
-    var maxRight = size - ($('.js-qv-mask.mask').width() +right.width() + left.width());
+    // define navigation
+    if (_thumbnails.length > 1 && !settings.nav) {
+      $('<div class="scroll-box-arrows"><i class="ti-angle-left"></i><i class="ti-angle-right"></i></div>').insertAfter(_thumbnailsMask);
+    }
+    // set navigation
+    $(settings.right).on('click', function () { 
+      navSlide('+=' + _thumbnailsMask.width())
+     });
+    $(settings.left).on('click', function () { 
+      navSlide('-=' + _thumbnailsMask.width())
+     }); 
 
-    right.on("click", function() {
-      var slide = parseInt( $('#product .js-qv-mask ul').css('left'), 10);
-
-      if ( slide + -400 < -maxRight ) 
-        $('#product .js-qv-mask ul').css('left', -maxRight );
-      else
-        $('#product .js-qv-mask ul').css('left', slide + -400 );
-        
-    });
-
-    left.on("click", function() {
-      var slide = parseInt( $('#product .js-qv-mask ul').css('left'), 10);
-
-      if ( slide + 400 < 0 ) 
-        $('#product .js-qv-mask ul').css('left', slide + 400 );
-      else
-        $('#product .js-qv-mask ul').css('left', '0px' );
-    });
-
-    $('.js-qv-mask.mask').on({
-      'touchmove': function(e) { 
-          console.log('slide', e); // Replace this with your code.
-      }
-    });
-
-
-    thumbnails.on("click", function() {
-      var img = $(this).attr('data-image-large-src');
-      if(cover.attr('src') != img){
-        cover.attr('src', img);
-        thumbnails.removeClass('selected');
+    _thumbnails.on("click", function() {
+      var img = $(this).find("img").attr('data-image-large-src');
+      if(_cover.attr('src') != img){
+        _cover.attr('src', img);
+        _thumbnails.removeClass('selected');
         $(this).addClass('selected');
       }
     });
+
+    function navSlide(direction) {
+      _thumbnailsMask.animate({
+        scrollLeft: direction
+      }, "slow");
+    }
 
     return this;
 
@@ -57,11 +59,11 @@
  
 }( jQuery ));
  
-$( ".product-cover" ).productCover();
+$( ".images-container" ).productCover();
 
 prestashop.on(
   'updateProduct',
   function (event) {
-      setTimeout(function(){ $( ".product-cover" ).productCover(); }, 2000);
+      setTimeout(function(){ $( ".images-container" ).productCover(); }, 2000);
   }
 );

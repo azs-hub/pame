@@ -999,3 +999,9 @@ footer input[type="submit"] {
     display: block;
   }
 }
+
+@media (max-width: 992px) {
+  .container {
+    width: 100% !important;
+  }
+}

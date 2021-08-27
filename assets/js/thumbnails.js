@@ -67,3 +67,19 @@ prestashop.on(
       setTimeout(function(){ $( ".images-container" ).productCover(); }, 2000);
   }
 );
+
+$(window).load( function(){
+  function preload(imageArray, index) {
+    index = index || 0;
+    if (imageArray && imageArray.length > index) {
+      var img = new Image ();
+      img.onload = function() {
+          preload(imageArray, index + 1);
+      }
+      img.src = $(imageArray[index]).find("img").attr("data-image-large-src");
+    }
+  }
+/* images is an array with image metadata */
+preload($(".js-qv-product-images li"));
+
+});

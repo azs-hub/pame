@@ -25,7 +25,7 @@
 {if $elements}
   <div id="block-reassurance"class="row">
   {foreach from=$elements item=element}
-    <div class="col-xs-4"><p>{$element.text}</p></div>
+    <div class="col-xs-4"><p>{$element.text nofilter}</p></div>
   {/foreach}
   </div>
 {/if}

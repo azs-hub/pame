@@ -2,6 +2,7 @@
   <div class="blockcart cart-preview" data-refresh-url="{$refresh_url}">
     <div class="header">
       <a rel="nofollow" href="{$cart_url}">
+        <span class="ti-shopping-cart"></span>
         <span>{l s='Bag' d='Shop.Theme.Actions'}</span>
         <span>({$cart.products_count})</span>
       </a>

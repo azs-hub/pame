@@ -22,11 +22,6 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='header_banner'}
-  <div class="header-banner">
-    {l s='Free shipping' d='Shop.Global.Banner'}
-  </div>
-{/block}
 
 {block name='header_nav'}
   <nav class="header-nav">
@@ -64,17 +59,17 @@
   <div class="header-top">
     <div class="container">
        <div class="row">
-        <div class="col-sm-3 hidden-xs-down" id="_desktop_logo">
+        <div class="col-sm-4 hidden-xs-down" id="_desktop_logo">
           <a href="{$urls.base_url}">
             <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
             {if $page.page_name == 'index'}
-              <h1>{$shop.name} <span>SHOP</span></h1>
+              <h1>{$shop.name}</h1>
             {else}
-              <h2>{$shop.name} <span>SHOP</span></h2>
+              <h2>{$shop.name}</h2>
             {/if}
           </a>
         </div>
-        <div class="col-sm-9 hidden-xs position-static">
+        <div class="col-sm-8 hidden-xs position-static">
           {hook h='displayTop'}
           <div class="clearfix"></div>
         </div>

@@ -75,9 +75,11 @@
         <div class="col-xs-12 col-sm-6">
           {block name='page_header_container'}
             {block name='page_header'}
-              <div class="short-description">{block name='product_description_short'}
-                {$product.description_short nofilter}
-              {/block}</div>
+              <div class="short-description">
+                {block name='product_description_short'}
+                  {$product.description_short nofilter}
+                {/block}
+              </div>
               <h2 itemprop="name">{block name='page_title'}{$product.name}{/block}</h2>
             {/block}
           {/block}

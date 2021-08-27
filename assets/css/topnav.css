@@ -159,6 +159,10 @@
   cursor: pointer;
   z-index: 100;
 }
+.language-selector button .ti-angle-down,
+.currency-selector button .ti-angle-down {
+  vertical-align: middle;
+}
 .language-selector button,
 .currency-selector button {
   background-color: #000;

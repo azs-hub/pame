@@ -27,7 +27,7 @@
 
   <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span>{$current_currency.iso_code} {$current_currency.sign}</span>
-    <span class="caret"></span>
+    <span class="ti-angle-down"></span>
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="dLabel">
